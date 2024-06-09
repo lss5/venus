@@ -111,3 +111,23 @@
     font-weight: 900;
     font-style: italic;
 }
+
+
+.parallax {
+    background: url('../images/nail-masters-1.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    /* height: 100vh; */
+    /* padding: 20vh 0; */
+}
+
+.parallax_2 {
+    background: url('../images/nail-masters-2.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    /* height: 100vh; */
+}
