@@ -15,7 +15,12 @@ export default {
                 sans: ['Montserrat', ...defaultTheme.fontFamily.sans],
             },
         },
+        // screens: {
+        //     sm: '480px',
+        //     md: '770px',
+        //     lg: '976px',
+        //     xl: '1440px',
+        // },
     },
-
     plugins: [forms],
 };

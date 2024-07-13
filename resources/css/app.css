@@ -114,7 +114,8 @@
 
 
 .parallax {
-    background: url('../images/nail-masters-1.jpeg');
+    /* background: url('../images/product/main.jpg'); */
+    background: url('../images/nail-masters-3.jpeg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -124,7 +125,7 @@
 }
 
 .parallax_2 {
-    background: url('../images/nail-masters-2.jpeg');
+    background: url('../images/nail-masters-1.jpeg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

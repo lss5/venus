@@ -9,7 +9,3 @@ import Alpine from 'alpinejs';
 window.Alpine = Alpine;
 
 Alpine.start();
-
-function Menu(e) {
-    console.log(e);
-}
