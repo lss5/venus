@@ -13,11 +13,11 @@
         @include('partials.nav')
     </header>
 
-    <main>
+    <main class="mt-navbar">
         @yield('content')
     </main>
 
-    <footer class="container mb-3 mb-lg-3 py-3 border-top">
+    <footer class="container mb-2 py-3 border-top">
         @include('partials.footer')
     </footer>
 </body>

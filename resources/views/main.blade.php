@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container-fluid container-xxl mt-navbar">
+<div class="container-fluid container-xxl">
     <div class="row">
         <!-- Левая -->
         <div class="col-12 col-lg-6 px-0">

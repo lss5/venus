@@ -11,9 +11,9 @@
         </button>
         <div class="navbar-collapse collapse" id="navbarSupportedContent" style="">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-normal">
-                <li class="nav-item"><a class="nav-link" href="/srok-sluzhby-i-garantiya">Гарантия</a></li>
-                <li class="nav-item"><a class="nav-link" href="/cooperation">Доставка и оплата</a></li>
-                <li class="nav-item"><a class="nav-link" href="/cooperation">Сотрудничество</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('main') }}">Каталог</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('main') }}">Гарантия</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('main') }}">Доставка и Оплата</a></li>
             </ul>
             <ul class="my-3 my-lg-0 list-unstyled d-flex justify-content-center">
                 <li class="ms-3"><a class="link-body-emphasis text-primary" href="https://vk.com/clean_spc" target="_blank">
