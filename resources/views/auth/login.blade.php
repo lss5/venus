@@ -1,47 +1,47 @@
-<x-guest-layout>
-    <!-- Session Status -->
-    <x-auth-session-status class="mb-4" :status="session('status')" />
+@extends('layouts.app')
 
-    <form method="POST" action="{{ route('login') }}">
-        @csrf
-
-        <!-- Email Address -->
-        <div>
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+@section('content')
+<div class="container">
+    <div class="row my-5">
+        <div class="col-12 col-lg-6 mx-auto">
+            <h1 class="fs-4 mb-3 fw-normal text-center">Авторизуйтесь для входа в личный кабинет</h1>
+            <form method="POST" action="{{ route('login') }}">
+                @csrf
+                <div class="mb-3 row">
+                    <label for="inputEmail" class="col-sm-2 col-form-label">Почта</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control @error('email') is-invalid @enderror" name="email" id="inputEmail" placeholder="email@example.com">
+                    </div>
+                    @error('email')
+                        <div class="form-text text-danger">
+                            <strong>{{ $message }}</strong>
+                        </div>
+                    @enderror
+                </div>
+                <div class="mb-3 row">
+                    <label for="inputPassword" class="col-sm-2 col-form-label">Пароль</label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control @error('password') is-invalid @enderror" name="password" id="inputPassword">
+                    </div>
+                    @error('password')
+                        <div class="form-text text-danger">
+                            <strong>{{ $message }}</strong>
+                        </div>
+                    @enderror
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button type="submit" class="btn btn-primary">
+                        Войти
+                    </button>
+                    @if (Route::has('password.request'))
+                        <a class="btn btn-link text-decoration-none" href="{{ route('password.request') }}">
+                            Забыли пароль?
+                        </a>
+                    @endif
+                </div>
+            </form>
         </div>
+    </div>
+</div>
 
-        <!-- Password -->
-        <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
-
-            <x-text-input id="password" class="block mt-1 w-full"
-                            type="password"
-                            name="password"
-                            required autocomplete="current-password" />
-
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
-        </div>
-
-        <!-- Remember Me -->
-        <div class="block mt-4">
-            <label for="remember_me" class="inline-flex items-center">
-                <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" name="remember">
-                <span class="ms-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-            </label>
-        </div>
-
-        <div class="flex items-center justify-end mt-4">
-            @if (Route::has('password.request'))
-                <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
-                    {{ __('Forgot your password?') }}
-                </a>
-            @endif
-
-            <x-primary-button class="ms-3">
-                {{ __('Log in') }}
-            </x-primary-button>
-        </div>
-    </form>
-</x-guest-layout>
+@endsection

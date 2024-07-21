@@ -1,17 +1,12 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-bold text-6xl text-gray-800 leading-tight">
-            VENUS
-        </h2>
-    </x-slot>
+@extends('layouts.app')
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900 font-bold">
-                    {{ __("You're logged in!") }}
-                </div>
+@section('content')
+    <div class="container">
+        <div class="row">
+            <div class="col-12 my-5">
+                Добро пожаловать
+                <a href="{{ route('main') }}" class="btn btn-primary"></a>
             </div>
         </div>
     </div>
-</x-app-layout>
+@endsection

@@ -13,7 +13,7 @@
         @include('partials.nav')
     </header>
 
-    <main class="mt-navbar">
+    <main class="pt-navbar">
         @yield('content')
     </main>
 
