@@ -1,6 +1,30 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+$primary: #002850;
+$bg-violet:#a73afd;
+$bg-blue: #005bff;
+$bg-yellow: #fce000;
+$bg-purple: #8654cc;
+
+$font-family-sans-serif: 'Montserrat',
+    system-ui,
+    // Safari for macOS and iOS (San Francisco)
+    -apple-system,
+    // Windows
+    "Segoe UI",
+    // Android
+    Roboto,
+    // older macOS and iOS
+    "Helvetica Neue",
+    // Linux
+    "Noto Sans",
+    "Liberation Sans",
+    // Basic web fallback
+    Arial,
+    // Sans serif fallback
+    sans-serif,
+    // Emoji fonts
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+
+@import 'bootstrap/scss/bootstrap';
 
 @font-face {
     font-family: 'Montserrat';
@@ -112,7 +136,6 @@
     font-style: italic;
 }
 
-
 .parallax {
     /* background: url('../images/product/main.jpg'); */
     background: url('../images/nail-masters-3.jpeg');
@@ -131,4 +154,43 @@
     background-size: cover;
     background-attachment: fixed;
     /* height: 100vh; */
+}
+
+.mt-navbar {
+    margin-top: 88px !important;
+}
+.text-justify {
+    text-align: justify !important;
+}
+.fs-5 {
+    font-size: 1.125rem !important;
+}
+.fs-xs {
+    font-size: 0.75rem; /* 12px */
+    line-height: 1rem; /* 16px */
+}
+.fs-sm {
+    font-size: 0.875rem; /* 14px */
+    line-height: 1.25rem; /* 20px */
+}
+
+.btn-wb {
+    --bs-btn-font-weight: 600;
+    @include button-variant($bg-violet, darken($bg-violet, 3%));
+    // color: #fff;
+}
+.btn-ozon {
+    --bs-btn-font-weight: 600;
+    @include button-variant($bg-blue, darken($bg-blue, 3%));
+    // color: #fff;
+}
+.btn-yamarket {
+    --bs-btn-font-weight: 600;
+    @include button-variant($bg-yellow, darken($bg-yellow, 3%));
+    // color: #fff;
+}
+.btn-megamarket {
+    --bs-btn-font-weight: 600;
+    @include button-variant($bg-purple, darken($bg-purple, 3%));
+    // color: #fff;
 }
