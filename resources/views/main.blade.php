@@ -173,15 +173,22 @@
         </div>
     </div>
 
-    <div class="row">
-        <p class="fs-5 fw-light text-justify">
-            Вытяжка <span class="fw-medium">производиться в России</span> на высокоточном оборудовании с
-            программным управлением.
-            Используется стойкая к химическим очистителям полимерная окраска.
-            Все комплектующие проходят строгий контроль качества.
-            Каждое изделие имеет все необходимые документы и соответствует требованиям необходимых ГОСТ и
-            технических регламетов ЕАС.
-        </p>
+    <div class="row my-3">
+        <h2 class="mb-3 text-center fs-3 fw-medium">Бесплатная и быстрая доставка</h2>
+        <div class="col-12">
+            <p class="fs-5 fw-light text-justify mb-2">
+                <span class="fw-medium">Доставка осуществляется бесплатно</span>
+                до ближайшего к вам офиса <span class="fw-medium">СДЭК</span> или отделения <span class="fw-medium">Почты России</span>.
+                Каждому заказу присваивается трек-номер, который будет отправлен Вам на e-mail или телефон. Отправка осуществляется в день оплаты.
+                Самовывоз возможен у партнеров, при условии предварительного согласования с менеджером по
+                телефону - <a class="fw-medium link-primary link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="{{ route('main') }}">список адресов магазинов</a>.
+                Детали доставки комплектующих и возможность отправки в другие страны уточняйте у менеджера.
+            </p>
+            <p class="fs-5 fw-light mb-2">
+                Для покупки свяжитесь с нами через форму "Обратной связи" или напишите на почту:
+                <a class="fw-medium link-primary link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="mailto:manager@clean-spc.ru">MANAGER@CLEAN-SPC.RU</a>.
+            </p>
+        </div>
     </div>
 
     <div class="row my-0 my-lg-5">
@@ -305,21 +312,14 @@
     </div>
 
     <div class="row my-3 my-lg-5">
-        <h2 class="mb-3 text-center fs-3 fw-medium">Бесплатная и быстрая доставка</h2>
-        <div class="col-12">
-            <p class="fs-5 fw-light text-justify mb-2">
-                <span class="fw-medium">Доставка осуществляется бесплатно</span>
-                до ближайшего к вам офиса <span class="fw-medium">СДЭК</span> или отделения <span class="fw-medium">Почты России</span>.
-                Каждому заказу присваивается трек-номер, который будет отправлен Вам на e-mail или телефон. Отправка осуществляется в день оплаты.
-                Самовывоз возможен у партнеров, при условии предварительного согласования с менеджером по
-                телефону - <a class="fw-medium link-primary link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="{{ route('main') }}">список адресов магазинов</a>.
-                Детали доставки комплектующих и возможность отправки в другие страны уточняйте у менеджера.
-            </p>
-            <p class="fs-5 fw-light mb-2">
-                Для покупки свяжитесь с нами через форму "Обратной связи" или напишите на почту:
-                <a class="fw-medium link-primary link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="mailto:manager@clean-spc.ru">MANAGER@CLEAN-SPC.RU</a>.
-            </p>
-        </div>
+        <p class="fs-5 fw-light text-justify">
+            Вытяжка <span class="fw-medium">производиться в России</span> на высокоточном оборудовании с
+            программным управлением.
+            Используется стойкая к химическим очистителям полимерная окраска.
+            Все комплектующие проходят строгий контроль качества.
+            Каждое изделие имеет все необходимые документы и соответствует требованиям необходимых ГОСТ и
+            технических регламетов ЕАС.
+        </p>
     </div>
 </div>
 

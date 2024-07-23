@@ -3,9 +3,8 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <div class="col-12 my-5">
-                Добро пожаловать
-                <a href="{{ route('main') }}" class="btn btn-primary"></a>
+            <div class="col-12 my-3 my-lg-5">
+                <h1 class="fs-4 fw-medium">Личный кабинет</h1>
             </div>
         </div>
     </div>

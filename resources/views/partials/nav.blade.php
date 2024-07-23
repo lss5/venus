@@ -11,7 +11,7 @@
         </button>
         <div class="navbar-collapse collapse" id="navbarSupportedContent" style="">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-normal">
-                <li class="nav-item"><a class="nav-link" href="{{ route('main') }}">Каталог</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('product.index') }}">Каталог</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('main') }}">Гарантия</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('main') }}">Доставка и Оплата</a></li>
             </ul>
