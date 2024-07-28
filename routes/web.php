@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdministratorController;
+use App\Http\Controllers\LeadController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ManufactureController;
 use App\Http\Controllers\ModelTypeController;
@@ -16,6 +17,13 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 require __DIR__.'/auth.php';
+
+// Leads
+Route::post('/lead', [LeadController::class, 'store'])->name('lead.store');
+Route::prefix('lead')->name('lead.')->middleware('auth','verified')->group(function(){
+    Route::get('/', [LeadController::class, 'index'])->name('index');
+    Route::get('/{lead}', [LeadController::class, 'show'])->name('show');
+});
 
 // Products for All
 Route::prefix('product')->name('product.')->group(function(){

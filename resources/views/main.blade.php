@@ -24,39 +24,39 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h1 class="modal-title fs-5" id="exampleModalLabel">Обратный звонок</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <form data-request="onSend">
+                                <div class="alert alert-success text-center fs-sm d-none" role="alert">
+                                    Наш менеджер с Вами свяжется в самое ближайшее время!
+                                </div>
+                                <form method="POST" action="{{ route('lead.store') }}" id="contact-form-modal">
+                                    <meta name="csrf-token" content="{{ csrf_token() }}">
                                     <div class="mb-3 row">
                                         <label for="name" class="col-sm-2 col-form-label fs-5">Имя</label>
                                         <div class="col-sm-10">
-                                            <input type="text" class="form-control" id="name">
-                                        </div>
-                                        <div class="form-text text-danger fs-sm">
-                                            Поле обязательно для заполнения
+                                            <input type="text" class="form-control" id="name" name="name">
+                                            <div class="form-text text-danger fs-sm text-start"></div>
                                         </div>
                                     </div>
                                     <div class="mb-3 row">
-                                        <label for="contact" class="col-sm-2 col-form-label fs-5">Телефон</label>
+                                        <label for="phone" class="col-sm-2 col-form-label fs-5">Телефон</label>
                                         <div class="col-sm-10">
-                                            <input type="text" class="form-control" id="contact">
-                                        </div>
-                                        <div class="form-text text-danger fs-sm">
-                                            Поле обязательно для заполнения
+                                            <input type="text" class="form-control" id="phone" name="phone">
+                                            <div class="form-text text-danger fs-sm text-start"></div>
                                         </div>
                                     </div>
         
-                                    <button type="submit" class="w-100 btn btn-lg btn-primary mb-3" data-attach-loading="">
+                                    <button type="submit" class="w-100 btn btn-lg btn-primary mb-3">
                                         Заказать
                                     </button>
         
                                     <div class="form-check mb-3">
-                                        <input class="form-check-input" type="checkbox" value="" id="politics" checked>
+                                        <input class="form-check-input" type="checkbox" value="true" id="politics" name="politics" checked>
                                         <label class="form-check-label fs-sm" for="politics">
                                             Соглашаюсь с <a href="{{ route('main') }}" target="_blank" class="link-primary link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Политикой конфиденциальности</a>
                                         </label>
+                                        <div class="form-text text-danger fs-sm text-start"></div>
                                     </div>
                                 </form>
                             </div>
@@ -238,8 +238,7 @@
             </ul>
         </div>
         <div class="col-12 col-lg-6">
-            <img src="https://clean-spc.ru/themes/venus/assets/images/product/razmer.png" alt=""
-                class="img-fluid mt-3">
+            <img src="{{ Vite::asset('resources/images/product/razmer.png') }}" alt="" class="img-fluid mt-3">
         </div>
     </div>
 
@@ -276,35 +275,36 @@
         <div class="col-12 col-lg-6 my-2 my-lg-0">
             <div class="bg-body-tertiary border rounded-3 h-100 mx-auto px-3 px-md-5">
                 <h2 class="mt-3 mt-lg-4 fw-medium fs-3">Обратный звонок</h2>
-                <form data-request="onSend">
+                <div class="alert alert-success text-center fs-sm d-none" role="alert">
+                    Наш менеджер с Вами свяжется в самое ближайшее время!
+                </div>
+                <form method="POST" action="{{ route('lead.store') }}" id="contact-form">
+                    <meta name="csrf-token" content="{{ csrf_token() }}">
                     <div class="mb-3 row">
                         <label for="name" class="col-sm-2 col-form-label fs-5">Имя</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="name">
-                        </div>
-                        <div class="form-text text-danger fs-sm">
-                            Поле обязательно для заполнения
+                            <input type="text" class="form-control" id="name" name="name">
+                            <div class="form-text text-danger fs-sm"></div>
                         </div>
                     </div>
                     <div class="mb-3 row">
-                        <label for="contact" class="col-sm-2 col-form-label fs-5">Телефон</label>
+                        <label for="phone" class="col-sm-2 col-form-label fs-5">Телефон</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="contact">
-                        </div>
-                        <div class="form-text text-danger fs-sm">
-                            Поле обязательно для заполнения
+                            <input type="text" class="form-control" id="phone" name="phone">
+                            <div class="form-text text-danger fs-sm"></div>
                         </div>
                     </div>
 
-                    <button type="submit" class="w-100 btn btn-lg btn-primary mb-3" data-attach-loading="">
+                    <button type="submit" class="w-100 btn btn-lg btn-primary mb-3">
                         Заказать
                     </button>
 
                     <div class="form-check mb-3">
-                        <input class="form-check-input" type="checkbox" value="" id="politics" checked>
+                        <input class="form-check-input" type="checkbox" value="true" id="politics" name="politics" checked>
                         <label class="form-check-label fs-sm" for="politics">
                             Соглашаюсь с <a href="{{ route('main') }}" class="link-primary link-underline link-underline-opacity-0 link-underline-opacity-75-hover">политикой конфиденциальности</a>
                         </label>
+                        <div class="form-text text-danger fs-sm"></div>
                     </div>
                 </form>
             </div>
