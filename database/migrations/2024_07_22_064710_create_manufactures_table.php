@@ -13,10 +13,9 @@ return new class extends Migration
     {
         Schema::create('manufactures', function (Blueprint $table) {
             $table->uuid('id')->primary();
-            $table->string('name', 100);
             $table->unsignedInteger('serial_number');
             $table->foreignId('modeltype_id')->constrained('model_types');
-            $table->string('version', 100);
+            $table->text('description')->nullable();
             $table->timestamps();
         });
     }

@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Manufacture extends Model
 {
@@ -12,4 +13,9 @@ class Manufacture extends Model
     use HasUuids;
 
     protected $guarded = [];
+
+    public function modeltype(): BelongsTo
+    {
+        return $this->belongsTo(ModelType::class);
+    }
 }
