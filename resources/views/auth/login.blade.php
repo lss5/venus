@@ -10,7 +10,7 @@
                 <div class="mb-3 row">
                     <label for="inputEmail" class="col-sm-2 col-form-label">Почта</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control @error('email') is-invalid @enderror" name="email" id="inputEmail" placeholder="email@example.com">
+                        <input type="text" class="form-control @error('email') is-invalid @enderror" name="email" id="inputEmail">
                     </div>
                     @error('email')
                         <div class="form-text text-danger">

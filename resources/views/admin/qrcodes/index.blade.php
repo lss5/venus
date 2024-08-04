@@ -4,7 +4,7 @@
     <div class="container mb-5">
         <div class="row">
             <div class="col-12 my-3 my-lg-5">
-                <h1 class="fs-4 fw-medium">Произведенные</h1>
+                <h1 class="fs-4 fw-medium">QR codes</h1>
                 <table class="table table-hover">
                     <thead>
                         <tr>
@@ -17,19 +17,19 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($manufacturers as $manufacture)
-                            <tr onclick="window.location='{{ route('manufacture.edit', $manufacture->id) }}';">
-                                <td>{{ $manufacture->modeltype->title }}</td>
-                                <td>{{ $manufacture->modeltype->article }}</td>
-                                <td>{{ $manufacture->modeltype->version }}</td>
-                                <td>{{ $manufacture->serial_number }}</td>
-                                <td>{{ $manufacture->id }}</td>
-                                <td>{{ $manufacture->created_at->format('d.m.Y') }}</td>
+                        @foreach ($qrcodes as $qrcode)
+                            <tr onclick="window.location='{{ route('qrcode.edit', $qrcode->id) }}';">
+                                <td>{{ $qrcode->modeltype->title }}</td>
+                                <td>{{ $qrcode->modeltype->article }}</td>
+                                <td>{{ $qrcode->modeltype->version }}</td>
+                                <td>{{ $qrcode->serial_number }}</td>
+                                <td>{{ $qrcode->id }}</td>
+                                <td>{{ $qrcode->created_at->format('d.m.Y') }}</td>
                             </tr>
                         @endforeach
                     </tbody>
                   </table>
-                <a href="{{ route('manufacture.create') }}" class="btn btn-primary mt-3">Создать партию</a>
+                <a href="{{ route('qrcode.create') }}" class="btn btn-primary mt-3">Создать QR-коды</a>
             </div>
         </div>
     </div>

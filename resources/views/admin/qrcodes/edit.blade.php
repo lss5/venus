@@ -7,7 +7,7 @@
                 <h1 class="fs-3 fw-medium">Редактирование товарной единицы</h1>
             </div>
         </div>
-        <form method="POST" action="{{ route('manufacture.update', $item->id) }}">
+        <form method="POST" action="{{ route('qrcode.update', $item->id) }}">
             @csrf
             @method('PUT')
             <div class="row mb-3">
@@ -40,12 +40,12 @@
                 </div>
             </div>
             <button type="submit" class="btn btn-primary">Сохранить</button>
-            <a href="{{ route('manufacture.index') }}" type="submit" class="btn btn-secondary">Назад</a>
+            <a href="{{ route('qrcode.index') }}" type="submit" class="btn btn-secondary">Назад</a>
             <button class="btn btn-outline-danger" onclick="event.preventDefault();
                     document.getElementById('delete-form').submit();">Удалить
             </button>
         </form>
-        <form action="{{ route('manufacture.destroy', $item->id) }}" method="POST" id="delete-form" class="form-inline">
+        <form action="{{ route('qrcode.destroy', $item->id) }}" method="POST" id="delete-form" class="form-inline">
             @method('DELETE')
             @csrf
         </form>

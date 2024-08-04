@@ -12,8 +12,8 @@ class ModelType extends Model
 
     protected $guarded = [];
 
-    public function manufacturers(): HasMany
+    public function qrcodes(): HasMany
     {
-        return $this->hasMany(Manufacture::class);
+        return $this->hasMany(Qrcode::class);
     }
 }

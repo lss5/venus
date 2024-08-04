@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\Qrcode;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -37,6 +38,13 @@ class ProductController extends Controller
     public function show(Product $product)
     {
         //
+    }
+
+    public function qrcode(Qrcode $qrcode)
+    {
+        return view('products.qrcode', [
+            'qrcode' => $qrcode,
+        ]);
     }
 
     /**

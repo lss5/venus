@@ -7,7 +7,7 @@
                 <h1 class="fs-3 fw-medium">Создание партии</h1>
             </div>
         </div>
-        <form method="POST" action="{{ route('manufacture.store') }}">
+        <form method="POST" action="{{ route('qrcode.store') }}">
             @csrf
             <div class="row mb-3">
                 <label for="model" class="col-sm-2 col-form-label">Модель</label>
@@ -42,14 +42,8 @@
                     @enderror
                 </div>
             </div>
-            <div class="row mb-3">
-                <label for="description" class="col-sm-2 col-form-label">Описание</label>
-                <div class="col-sm-10">
-                    <textarea class="form-control" id="description" name="description" rows="3">{{ old('description') ?? ''}}</textarea>
-                </div>
-            </div>
             <button type="submit" class="btn btn-primary">Создать</button>
-            <a href="{{ route('manufacture.index') }}" type="submit" class="btn btn-secondary">Назад</a>
+            <a href="{{ route('qrcode.index') }}" type="submit" class="btn btn-secondary">Назад</a>
         </form>
     </div>
 @endsection

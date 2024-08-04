@@ -11,12 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('manufactures', function (Blueprint $table) {
+        Schema::create('qrcodes', function (Blueprint $table) {
             $table->uuid('id')->primary();
+            $table->timestamps();
             $table->unsignedInteger('serial_number');
             $table->foreignId('modeltype_id')->constrained('model_types');
-            $table->text('description')->nullable();
-            $table->timestamps();
         });
     }
 
@@ -25,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('manufactures');
+        Schema::dropIfExists('qrcodes');
     }
 };
