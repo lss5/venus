@@ -14,18 +14,14 @@ Route::get('/', function () {
     return view('main');
 })->name('main');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
 
 require __DIR__.'/auth.php';
 
 // Leads
 Route::post('/lead', [LeadController::class, 'store'])->name('lead.store');
-Route::prefix('lead')->name('lead.')->middleware('auth','verified')->group(function(){
-    Route::get('/', [LeadController::class, 'index'])->name('index');
-    Route::get('/{lead}', [LeadController::class, 'show'])->name('show');
-});
 
 // Products for All
 Route::prefix('product')->name('product.')->group(function(){
@@ -36,15 +32,25 @@ Route::prefix('product')->name('product.')->group(function(){
             return view('products.index');
         });
 });
+
+// Administrator
+Route::prefix('admin')->name('admin.')->middleware('auth','verified')->group(function(){
+    Route::get('/', [AdministratorController::class, 'index'])->name('index');
+});
+
+// Leads
+Route::prefix('lead')->name('lead.')->middleware('auth','verified')->group(function(){
+    Route::get('/', [LeadController::class, 'index'])->name('index');
+    Route::get('/{lead}', [LeadController::class, 'show'])->name('show');
+});
+
+// products
 Route::prefix('product')->name('product.')->middleware('auth','verified')->group(function(){
     Route::get('/create', [ProductController::class, 'create'])->name('create');
     Route::post('/', [ProductController::class, 'store'])->name('store');
     Route::get('/{product}/edit', [ProductController::class, 'edit'])->name('edit');
     Route::put('/{product}', [ProductController::class, 'update'])->name('update');
     Route::delete('/{product}', [ProductController::class, 'destroy'])->name('destroy');
-});
-Route::prefix('admin')->name('admin.')->middleware('auth','verified')->group(function(){
-    Route::get('/', [AdministratorController::class, 'index'])->name('index');
 });
 
 // QRcodes
