@@ -18,47 +18,19 @@
                 </button>
 
                 <!-- Modal -->
-                <div class="modal fade" id="buy-modal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                <div class="modal fade" id="buy-modal" tabindex="-1" aria-labelledby="ModalLabel"
                     aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">Обратный звонок</h1>
+                                <h1 class="modal-title fs-5" id="ModalLabel">Обратный звонок</h1>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
                                 <div class="alert alert-success text-center fs-sm d-none" role="alert">
                                     Наш менеджер с Вами свяжется в самое ближайшее время!
                                 </div>
-                                <form method="POST" action="{{ route('lead.store') }}" id="contact-form-modal">
-                                    <meta name="csrf-token" content="{{ csrf_token() }}">
-                                    <div class="mb-3 row">
-                                        <label for="name" class="col-sm-2 col-form-label fs-5">Имя</label>
-                                        <div class="col-sm-10">
-                                            <input type="text" class="form-control" id="name" name="name">
-                                            <div class="form-text text-danger fs-sm text-start"></div>
-                                        </div>
-                                    </div>
-                                    <div class="mb-3 row">
-                                        <label for="phone" class="col-sm-2 col-form-label fs-5">Телефон</label>
-                                        <div class="col-sm-10">
-                                            <input type="text" class="form-control" id="phone" name="phone">
-                                            <div class="form-text text-danger fs-sm text-start"></div>
-                                        </div>
-                                    </div>
-        
-                                    <button type="submit" class="w-100 btn btn-lg btn-primary mb-3">
-                                        Заказать
-                                    </button>
-        
-                                    <div class="form-check mb-3">
-                                        <input class="form-check-input" type="checkbox" value="true" id="politics" name="politics" checked>
-                                        <label class="form-check-label fs-sm" for="politics">
-                                            Соглашаюсь с <a href="{{ route('pages.politics') }}" target="_blank" class="link-primary link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Политикой конфиденциальности</a>
-                                        </label>
-                                        <div class="form-text text-danger fs-sm text-start"></div>
-                                    </div>
-                                </form>
+                                @include('partials.callbackform')
                             </div>
                             <div class="modal-footer">
                                 <a href="https://www.wildberries.ru/catalog/179403701/detail.aspx" target="_blank" class="btn btn-wb">Wildberries</a>
@@ -78,7 +50,7 @@
     <hr class="text-primary border-3 border-primary">
 </div>
 
-<div class="container my-3 my-lg-5">
+<div class="container my-3">
     <div class="row">
         <span class="fs-5 fw-light text-justify">
             <span class="fw-medium text-uppercase">VENUS PROFESSIONAL</span> - это новая настольная вытяжка с
@@ -91,8 +63,71 @@
         </span>
     </div>
 
-    <div class="row mt-3">
-        <div class="col-12 col-lg-4 d-flex align-items-start my-1 my-lg-5">
+    <div class="row my-3">
+        <div class="col-12 col-lg-8 mx-auto">
+            <h2 class="text-center fw-medium fs-4 mb-3">Видеообзор от Алены Лаврентьевой</h2>
+            <video class="object-fit-cover w-100" width="100%" controls muted src="{{ Vite::asset('resources/videos/lavrenteva.mp4') }}"></video>
+        </div>
+    </div>
+
+    <div class="row my-3">
+        {{-- <h2 class="mb-3 fw-medium fs-3 text-center">По-настоящему эффективно!</h2> --}}
+        <div class="col-12 col-lg-5 d-flex align-items-center order-0">
+            <img src="{{ Vite::asset('resources/images/product/GB_9977_1.png') }}" class="img-fluid" alt="">
+        </div>
+        <div class="col-12 col-lg-7 d-flex flex-column justify-content-center order-1">
+            <h3 class="text-center fw-medium fs-4">Выходи на новый уровень!</h3>
+            <p class="m-0 fs-5 fw-light text-justify">
+                Мелкодисперсная пыль, состоящая из опасных химикатов, частиц кожи и ногтей клиента
+                летает по кабинету до 24 часов после окончания работ. Вдыхание такой смеси приводит
+                к затруднению дыхания и снижению иммунитета, а также может быть причиной развития
+                различных заболеваний. В VENUS используется бумажный фильт тонкой очистки,
+                позволяющий задерживать мелкодисперсные частицы (в том числе PM10 с диаметром менее
+                10 мкм). Также, предусмотрели возможность использования антибактериального
+                и угольного фильтров, что позволит еще больше повысить эффективность очистки воздуха.
+            </p>
+        </div>
+        <div class="col-12 col-lg-7 d-flex flex-column justify-content-center order-3 order-lg-2">
+            <h3 class="text-center fw-medium fs-4">Простота в использовании и обслуживании!</h3>
+            <p class="m-0 fs-5 fw-light text-justify">
+                <span class="fw-medium">Больше никаких мешков!</span> После работы с клиентом,
+                достаточно просто вытряхнуть пыль из фильтра. А при использовании салфеток из ткани - только
+                аккуратно удалить салфетку! Благодаря высокой мощности и большой площади всасывания
+                захватывает гораздо больше пыли (в сравнении с обычными пылесосами для маникюра) и экономит место на столе мастера.
+                Больше никакой пыли в кабинете! Чистый мастер, мебель и клиент!
+            </p>
+        </div>
+        <div class="col-12 col-lg-5 d-flex align-items-center order-2 order-lg-3">
+            <img src="{{ Vite::asset('resources/images/product/top.jpg') }}" class="img-fluid" alt="">
+        </div>
+        <div class="col-12 col-lg-4 d-flex align-items-center order-4">
+            <img src="{{ Vite::asset('resources/images/product/vent.webp') }}" class="img-fluid" alt="">
+        </div>
+        <div class="col-12 col-lg-8 d-flex flex-column justify-content-center order-5">
+            <h3 class="text-center fw-medium fs-4">Мощный радиальный вентилятор</h3>
+            <p class="m-0 fs-5 fw-light text-justify">
+                В вытяжке используется вентилятор промышленного класса, который создает непревзойденную тягу и при этом
+                тихий даже на максимальной мощности! Большой размер лопастей позволяет засасывать гораздо большое
+                воздуха при меньших оборотах. Благодаря этому уменьшен шум, увеличена производительность и
+                продлен срок службы вытяжки. Двигатель бесщеточный, на подшипниках. В нем отсутствуют
+                детали изнашивающиеся в процессе эксплуатации, что делает его практически "вечным".
+            </p>
+        </div>
+    </div>
+
+    <div class="row my-3">
+        <p class="fs-5 fw-light text-justify">
+            Вытяжка <span class="fw-medium">производиться в России</span> на высокоточном оборудовании с
+            программным управлением.
+            Используется стойкая к химическим очистителям полимерная окраска.
+            Все комплектующие проходят строгий контроль качества.
+            Каждое изделие имеет все необходимые документы и соответствует требованиям необходимых ГОСТ и
+            технических регламетов ЕАС.
+        </p>
+    </div>
+
+    <div class="row">
+        <div class="col-12 col-lg-4 d-flex align-items-start my-1 my-lg-3">
             <div class="icon-square d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3 text-primary">
                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" viewBox="0 0 16 16">
                     <path d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06zM6 5.04 4.312 6.39A.5.5 0 0 1 4 6.5H2v3h2a.5.5 0 0 1 .312.11L6 10.96V5.04zm7.854.606a.5.5 0 0 1 0 .708L12.207 8l1.647 1.646a.5.5 0 0 1-.708.708L11.5 8.707l-1.646 1.647a.5.5 0 0 1-.708-.708L10.793 8 9.146 6.354a.5.5 0 1 1 .708-.708L11.5 7.293l1.646-1.647a.5.5 0 0 1 .708 0z"></path>
@@ -103,7 +138,7 @@
                 <p class="fs-5 fw-normal">Низкий уровень шума обесечит больше комфорта Вам и Вашим клиентам </p>
             </div>
         </div>
-        <div class="col-12 col-lg-4 d-flex align-items-start my-1 my-lg-5">
+        <div class="col-12 col-lg-4 d-flex align-items-start my-1 my-lg-3">
             <div class="icon-square d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3 text-primary">
                 <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="currentColor" viewBox="0 0 496 512" >
                     <path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 448c-110.3 0-200-89.7-200-200S137.7 56 248 56s200 89.7 200 200-89.7 200-200 200zm84-143.4c-20.8 25-51.5 39.4-84 39.4s-63.2-14.3-84-39.4c-8.5-10.2-23.6-11.5-33.8-3.1-10.2 8.5-11.5 23.6-3.1 33.8 30 36 74.1 56.6 120.9 56.6s90.9-20.6 120.9-56.6c8.5-10.2 7.1-25.3-3.1-33.8-10.2-8.4-25.3-7.1-33.8 3.1zM136.5 211c7.7-13.7 19.2-21.6 31.5-21.6s23.8 7.9 31.5 21.6l9.5 17c2.1 3.7 6.2 4.7 9.3 3.7 3.6-1.1 6-4.5 5.7-8.3-3.3-42.1-32.2-71.4-56-71.4s-52.7 29.3-56 71.4c-.3 3.7 2.1 7.2 5.7 8.3 3.4 1.1 7.4-.5 9.3-3.7l9.5-17zM328 152c-23.8 0-52.7 29.3-56 71.4-.3 3.7 2.1 7.2 5.7 8.3 3.5 1.1 7.4-.5 9.3-3.7l9.5-17c7.7-13.7 19.2-21.6 31.5-21.6s23.8 7.9 31.5 21.6l9.5 17c2.1 3.7 6.2 4.7 9.3 3.7 3.6-1.1 6-4.5 5.7-8.3-3.3-42.1-32.2-71.4-56-71.4z"></path>
@@ -114,7 +149,7 @@
                 <p class="fs-5 fw-normal">Плавная регулировка мощности и легкое извлечение фильтра - все для комфорта мастера</p>
             </div>
         </div>
-        <div class="col-12 col-lg-4 d-flex align-items-start my-1 my-lg-5">
+        <div class="col-12 col-lg-4 d-flex align-items-start my-1 my-lg-3">
             <div class="icon-square d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3 text-primary">
                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" viewBox="0 0 16 16">
                     <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"></path>
@@ -128,72 +163,9 @@
         </div>
     </div>
 
-    <div class="row my-3">
-        {{-- <h2 class="mb-3 fw-medium fs-3 text-center">По-настоящему эффективно!</h2> --}}
-        <div class="col-12 col-lg-6 d-flex align-items-center order-0">
-            <img src="{{ Vite::asset('resources/images/product/GB_9977_1.png') }}" class="img-fluid" alt="">
-        </div>
-        <div class="col-12 col-lg-6 d-flex flex-column justify-content-center order-1">
-            <h3 class="text-center fw-medium fs-4">Выходи на новый уровень!</h3>
-            <p class="m-0 fs-5 fw-light text-justify">
-                Мелкодисперсная пыль, состоящая из опасных химикатов, частиц кожи и ногтей клиента
-                летает по кабинету до 24 часов после окончания работ. Вдыхание такой смеси приводит
-                к затруднению дыхания и снижению иммунитета, а также может быть причиной развития
-                различных заболеваний. В VENUS используется бумажный фильт тонкой очистки,
-                позволяющий задерживать мелкодисперсные частицы (в том числе PM10 с диаметром менее
-                10 мкм). Также, предусмотрели возможность использования антибактериального
-                и угольного фильтров, что позволит еще больше повысить эффективность очистки воздуха.
-            </p>
-        </div>
-        <div class="col-12 col-lg-6 d-flex flex-column justify-content-center order-3 order-lg-2">
-            <h3 class="text-center fw-medium fs-4">Простота в использовании и обслуживании!</h3>
-            <p class="m-0 fs-5 fw-light text-justify">
-                Больше никаких мешков! После работы с клиентом,
-                достаточно просто вытряхнуть пыль из фильтра. А при использовании салфеток из ткани - только
-                аккуратно удалить салфетку! Благодаря высокой мощности и большой площади всасывания
-                захватывает гораздо больше пыли (в сравнении с обычными пылесосами для маникюра) и экономит место на столе мастера.
-                Больше никакой пыли в кабинете! Чистый мастер, мебель и клиент!
-            </p>
-        </div>
-        <div class="col-12 col-lg-6 d-flex align-items-center order-2 order-lg-3">
-            <img src="{{ Vite::asset('resources/images/product/top.jpg') }}" class="img-fluid" alt="">
-        </div>
-        <div class="col-12 col-lg-6 d-flex align-items-center order-4">
-            <img src="{{ Vite::asset('resources/images/product/vent.webp') }}" class="img-fluid" alt="">
-        </div>
-        <div class="col-12 col-lg-6 d-flex flex-column justify-content-center order-5">
-            <h3 class="text-center fw-medium fs-4">Мощный радиальный вентилятор</h3>
-            <p class="m-0 fs-5 fw-light text-justify">
-                В вытяжке используется вентилятор промышленного класса, который создает непревзойденную тягу и при этом
-                тихий даже на максимальной мощности! Большой размер лопастей позволяет засасывать гораздо большое
-                воздуха при меньших оборотах. Благодаря этому уменьшен шум, увеличена производительность и
-                продлен срок службы вытяжки. Двигатель бесщеточный, на подшипниках. В нем отсутствуют
-                детали изнашивающиеся в процессе эксплуатации, что делает его практически "вечным".
-            </p>
-        </div>
-    </div>
-
-    <div class="row my-3">
-        <h2 class="mb-3 text-center fs-3 fw-medium">Бесплатная и быстрая доставка</h2>
-        <div class="col-12">
-            <p class="fs-5 fw-light text-justify mb-2">
-                <span class="fw-medium">Доставка осуществляется бесплатно</span>
-                до ближайшего к вам офиса <span class="fw-medium">СДЭК</span> или отделения <span class="fw-medium">Почты России</span>.
-                Каждому заказу присваивается трек-номер, который будет отправлен Вам на e-mail или телефон. Отправка осуществляется в день оплаты.
-                Самовывоз возможен у партнеров, при условии предварительного согласования с менеджером по
-                телефону - <a class="fw-medium link-primary link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="{{ route('pages.partners') }}">список адресов магазинов</a>.
-                Детали доставки комплектующих и возможность отправки в другие страны уточняйте у менеджера.
-            </p>
-            <p class="fs-5 fw-light mb-2">
-                Для покупки свяжитесь с нами через форму "Обратной связи" или напишите на почту:
-                <a class="fw-medium link-primary link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="mailto:manager@clean-spc.ru">MANAGER@CLEAN-SPC.RU</a>.
-            </p>
-        </div>
-    </div>
-
-    <div class="row my-0 my-lg-5">
+    <div class="row my-0 my-lg-3">
         <div class="col-12 col-lg-6 d-flex justify-content-center flex-column mb-3 mb-lg-0">
-            <h4 class="my-0 mb-3 fw-medium fs-4 text-center">Характеристики</h4>
+            <h2 class="mb-3 text-center fs-3 fw-medium">Характеристики</h2>
             <ul class="list-group list-group-flush fs-5 fw-light">
                 <li class="list-group-item d-flex justify-content-between align-items-start">
                     <div>Материал корпуса</div>
@@ -242,6 +214,34 @@
         </div>
     </div>
 
+    <div class="row my-3 my-lg-5">
+        <h2 class="mb-3 text-center fs-3 fw-medium">Отзывы о вытяжке VENUS PROFESSIONAL</h2>
+        <div class="col-12 col-lg-3">
+            <video class="object-fit-cover w-100" width="100%" controls muted src="{{ Vite::asset('resources/videos/review2.MP4') }}"></video>
+        </div>
+        <div class="col-12 col-lg-9">
+            <video class="object-fit-cover w-100" width="100%" controls muted src="{{ Vite::asset('resources/videos/review1.MP4') }}"></video>
+        </div>
+    </div>
+
+    <div class="row my-3 my-lg-5">
+        <h2 class="mb-3 text-center fs-3 fw-medium">Бесплатная и быстрая доставка</h2>
+        <div class="col-12">
+            <p class="fs-5 fw-light text-justify mb-2">
+                <span class="fw-medium">Доставка осуществляется бесплатно</span>
+                до ближайшего к вам офиса <span class="fw-medium">СДЭК</span> или отделения <span class="fw-medium">Почты России</span>.
+                Каждому заказу присваивается трек-номер, который будет отправлен Вам на e-mail или телефон. Отправка осуществляется в день оплаты.
+                Самовывоз возможен у партнеров, при условии предварительного согласования с менеджером по
+                телефону - <a class="fw-medium link-primary link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="{{ route('pages.partners') }}">список адресов магазинов</a>.
+                Детали доставки комплектующих и возможность отправки в другие страны уточняйте у менеджера.
+            </p>
+            <p class="fs-5 fw-light mb-2">
+                Для покупки свяжитесь с нами через форму "Обратной связи" или напишите на почту:
+                <a class="fw-medium link-primary link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="mailto:manager@clean-spc.ru">MANAGER@CLEAN-SPC.RU</a>.
+            </p>
+        </div>
+    </div>
+
     <!-- Обратная связь -->
     <div class="row mb-3 mb-lg-5" id="buy">
         <!-- Левая сторона -->
@@ -278,48 +278,9 @@
                 <div class="alert alert-success text-center fs-sm d-none" role="alert">
                     Наш менеджер с Вами свяжется в самое ближайшее время!
                 </div>
-                <form method="POST" action="{{ route('lead.store') }}" id="contact-form">
-                    <meta name="csrf-token" content="{{ csrf_token() }}">
-                    <div class="mb-3 row">
-                        <label for="name" class="col-sm-2 col-form-label fs-5">Имя</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="name" name="name">
-                            <div class="form-text text-danger fs-sm"></div>
-                        </div>
-                    </div>
-                    <div class="mb-3 row">
-                        <label for="phone" class="col-sm-2 col-form-label fs-5">Телефон</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="phone" name="phone">
-                            <div class="form-text text-danger fs-sm"></div>
-                        </div>
-                    </div>
-
-                    <button type="submit" class="w-100 btn btn-lg btn-primary mb-3">
-                        Заказать
-                    </button>
-
-                    <div class="form-check mb-3">
-                        <input class="form-check-input" type="checkbox" value="true" id="politics" name="politics" checked>
-                        <label class="form-check-label fs-sm" for="politics">
-                            Соглашаюсь с <a href="{{ route('pages.politics') }}" class="link-primary link-underline link-underline-opacity-0 link-underline-opacity-75-hover">политикой конфиденциальности</a>
-                        </label>
-                        <div class="form-text text-danger fs-sm"></div>
-                    </div>
-                </form>
+                @include('partials.callbackform')
             </div>
         </div>
-    </div>
-
-    <div class="row my-3 my-lg-5">
-        <p class="fs-5 fw-light text-justify">
-            Вытяжка <span class="fw-medium">производиться в России</span> на высокоточном оборудовании с
-            программным управлением.
-            Используется стойкая к химическим очистителям полимерная окраска.
-            Все комплектующие проходят строгий контроль качества.
-            Каждое изделие имеет все необходимые документы и соответствует требованиям необходимых ГОСТ и
-            технических регламетов ЕАС.
-        </p>
     </div>
 </div>
 
