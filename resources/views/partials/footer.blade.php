@@ -1,9 +1,9 @@
 <div class="row">
     <div class="col-12 col-lg-8 d-flex flex-column align-items-center justify-content-between">
         <ul class="nav d-flex justify-content-center fs-6 fw-normal">
-            <li class="nav-item"><a href="/srok-sluzhby-i-garantiya" class="nav-link px-2 text-body-secondary text-muted">Адреса магазинов</a></li>
-            <li class="nav-item"><a href="/cooperation" class="nav-link px-2 text-body-secondary text-muted">Сотрудничество</a></li>
-            <li class="nav-item"><a href="/politics" class="nav-link px-2 text-body-secondary text-muted">Политика конфенденциальности</a></li>
+            <li class="nav-item"><a href="{{ route('pages.partners') }}" class="nav-link px-2 text-body-secondary text-muted">Адреса магазинов</a></li>
+            <li class="nav-item"><a href="{{ route('pages.cooperation') }}" class="nav-link px-2 text-body-secondary text-muted">Сотрудничество</a></li>
+            <li class="nav-item"><a href="{{ route('pages.politics') }}" class="nav-link px-2 text-body-secondary text-muted">Политика конфенденциальности</a></li>
         </ul>
         <ul class="my-1 my-lg-3 list-unstyled d-flex justify-content-center">
             <li class="ms-3"><a class="link-body-emphasis text-primary" href="https://vk.com/clean_spc" target="_blank">

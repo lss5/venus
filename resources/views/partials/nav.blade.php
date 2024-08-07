@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-white fixed-top shadow-sm" id="navbar-site">
     <div class="container">
-        <a class="navbar-brand" href="{{ route('main') }}">
+        <a class="navbar-brand" href="{{ route('pages.index') }}">
             <div class="d-flex flex-column text-primary">
                 <span class="fw-normal fs-6 border-bottom border-5 border-primary">Настольная вытяжка для маникюра</span>
                 <span class="fw-bolder fs-4 text-center">VENUS <span class="fw-semibold">PROFESSIONAL</span></span>
@@ -12,8 +12,8 @@
         <div class="navbar-collapse collapse" id="navbarSupportedContent" style="">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-normal">
                 <li class="nav-item"><a class="nav-link" href="{{ route('product.index') }}">Каталог</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ route('main') }}">Гарантия</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ route('main') }}">Доставка и Оплата</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('pages.guarantee') }}">Гарантия</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('pages.delivery') }}">Доставка и Оплата</a></li>
             </ul>
             <ul class="my-3 my-lg-0 list-unstyled d-flex justify-content-center">
                 <li class="ms-3"><a class="link-body-emphasis text-primary" href="https://vk.com/clean_spc" target="_blank">

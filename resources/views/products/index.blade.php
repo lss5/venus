@@ -93,7 +93,7 @@
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="politics" checked>
                         <label class="form-check-label fs-sm" for="politics">
-                            Соглашаюсь с <a href="{{ route('main') }}" target="_blank" class="link-primary link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Политикой конфиденциальности</a>
+                            Соглашаюсь с <a href="{{ route('pages.politics') }}" target="_blank" class="link-primary link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Политикой конфиденциальности</a>
                         </label>
                         <p class="fs-6 fw-light mb-0 mt-2">
                             Наш менеджер свяжется с Вами в ближайшее время!
