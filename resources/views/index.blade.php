@@ -66,7 +66,7 @@
     <div class="row my-3">
         <div class="col-12 col-lg-8 mx-auto">
             <h2 class="text-center fw-medium fs-4 mb-3">Видеообзор от Алены Лаврентьевой</h2>
-            <video class="object-fit-cover w-100" width="100%" controls muted src="{{ Vite::asset('resources/videos/lavrenteva.mp4') }}"></video>
+            <video class="object-fit-cover w-100" width="100%" controls muted src="{{ Vite::asset('resources/videos/lavrenteva.mp4') }}" poster="{{ Vite::asset('resources/images/video/lavrenteva.png') }}"></video>
         </div>
     </div>
 
@@ -217,10 +217,10 @@
     <div class="row my-3 my-lg-5">
         <h2 class="mb-3 text-center fs-3 fw-medium">Отзывы о вытяжке VENUS PROFESSIONAL</h2>
         <div class="col-12 col-lg-3">
-            <video class="object-fit-cover w-100" width="100%" controls muted src="{{ Vite::asset('resources/videos/review2.MP4') }}"></video>
+            <video class="object-fit-cover w-100" width="100%" controls muted src="{{ Vite::asset('resources/videos/review2.MP4') }}" poster="{{ Vite::asset('resources/images/video/review2.png') }}"></video>
         </div>
         <div class="col-12 col-lg-9">
-            <video class="object-fit-cover w-100" width="100%" controls muted src="{{ Vite::asset('resources/videos/review1.MP4') }}"></video>
+            <video class="object-fit-cover w-100" width="100%" controls muted src="{{ Vite::asset('resources/videos/review1.MP4') }}" poster="{{ Vite::asset('resources/images/video/review1.png') }}"></video>
         </div>
     </div>
 
