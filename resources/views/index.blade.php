@@ -14,8 +14,17 @@
                 <p class="m-0 fs-2">Мощная вытяжка для профессионалов!</p>
                 <p class="mb-3 fs-3 fw-semibold">Защити себя и своих клиентов!</p>
                 <button type="button" class="btn btn-primary btn-lg mb-3" data-bs-toggle="modal" data-bs-target="#buy-modal">
-                    Заказать
+                    Обратный звонок
                 </button>
+                <div class="mt-1 fs-3 fw-medium">
+                    <span class="text-decoration-line-through fw-light">12800₽</span> 9990₽
+                </div>
+                <div class="mt-3">
+                    <a href="https://www.wildberries.ru/catalog/179403701/detail.aspx" target="_blank" class="btn btn-wb">Wildberries</a>
+                    <a href="https://www.ozon.ru/product/nastolnaya-manikyurnaya-vytyazhka-venus-professional-1403635649/" target="_blank" class="btn btn-ozon">OZON</a>
+                    <a href="https://market.yandex.ru/product--nastolnaia-vytiazhka-dlia-manikiura-venus-professional/54515310" target="_blank" class="btn btn-yamarket">Я.Маркет</a>
+                    <a href="https://megamarket.ru/catalog/details/vytyazhka-dlya-manikyura-venus-professional-600017050378/" target="_blank" class="btn btn-megamarket">МегаМаркет</a>
+                </div>
 
                 <!-- Modal -->
                 <div class="modal fade" id="buy-modal" tabindex="-1" aria-labelledby="ModalLabel"
@@ -31,12 +40,6 @@
                                     Наш менеджер с Вами свяжется в самое ближайшее время!
                                 </div>
                                 @include('partials.callbackform')
-                            </div>
-                            <div class="modal-footer">
-                                <a href="https://www.wildberries.ru/catalog/179403701/detail.aspx" target="_blank" class="btn btn-wb">Wildberries</a>
-                                <a href="https://www.ozon.ru/product/nastolnaya-manikyurnaya-vytyazhka-venus-professional-1403635649/" target="_blank" class="btn btn-ozon">OZON</a>
-                                <a href="https://market.yandex.ru/product--nastolnaia-vytiazhka-dlia-manikiura-venus-professional/54515310" target="_blank" class="btn btn-yamarket">Я.Маркет</a>
-                                <a href="https://megamarket.ru/catalog/details/vytyazhka-dlya-manikyura-venus-professional-600017050378/" target="_blank" class="btn btn-megamarket">МегаМаркет</a>
                             </div>
                         </div>
                     </div>
@@ -259,9 +262,9 @@
                         <li class="list-group-item">Сертификат соответствия ЕАС</li>
                     </ol>
                     <p class="card-title fw-medium fs-3">
-                        Цена: 10890 руб.
+                        Акция: <span class="text-decoration-line-through fw-light">12800₽</span> 9990₽
                     </p>
-                    {{-- <p class="text-body-secondary fs-6 fw-light mt-3">Гарантия низкой цены! Мы готовы предоставить Вам дополнительную скидку, если Вы найдете цену ниже!</p> --}}
+                    <p class="text-secondary fs-6 fw-light mt-1">Гарантия низкой цены! Нашли дешевле - сделаем скидку!</p>
                 </div>
                 <div class="card-footer">
                     <a href="https://www.ozon.ru/product/nastolnaya-manikyurnaya-vytyazhka-venus-professional-1403635649/" target="_blank" class="btn btn-ozon">OZON</a>
@@ -273,9 +276,9 @@
         </div>
         <!-- Правая сторона -->
         <div class="col-12 col-lg-6 my-2 my-lg-0">
-            <div class="bg-body-tertiary border rounded-3 h-100 mx-auto px-3 px-md-5">
-                <h2 class="mt-3 mt-lg-4 fw-medium fs-3">Обратный звонок</h2>
-                <div class="alert alert-success text-center fs-sm d-none" role="alert">
+            <div class="d-flex flex-column justify-content-center align-items-start bg-body-tertiary border rounded-3 h-100 mx-auto px-3 px-md-5">
+                <h2 class="my-3 mt-lg-4 fw-medium fs-3">Обратный звонок</h2>
+                <div class="alert alert-success text-center fs-sm d-none w-100" role="alert">
                     Наш менеджер с Вами свяжется в самое ближайшее время!
                 </div>
                 @include('partials.callbackform')

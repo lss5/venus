@@ -1,4 +1,4 @@
-<form method="POST" action="{{ route('lead.store') }}" id="contact-form">
+<form method="POST" action="{{ route('lead.store') }}" id="contact-form" class="w-100">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <div class="mb-3 row">
         <label for="name" class="col-sm-2 col-form-label fs-5">Имя</label>
