@@ -64,7 +64,7 @@ class QrcodeController extends Controller
         $validated = $request->validate([
             'model' => 'required|integer|exists:model_types,id',
             'serial_number' => 'required|integer',
-            'description' => 'nullable|integer',
+            'description' => 'nullable|max:4096',
         ]);
 
         $qrcode->update([

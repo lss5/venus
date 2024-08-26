@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\ModelType;
-use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Redirect;
 
 class ModelTypeController extends Controller
 {
@@ -31,7 +32,7 @@ class ModelTypeController extends Controller
     
         ModelType::create($validated);
     
-        return to_route('modeltype.index');
+        return Redirect::route('modeltype.index');
     }
 
     public function show(ModelType $modeltype)
@@ -55,13 +56,13 @@ class ModelTypeController extends Controller
 
         $modeltype->update($validated);
     
-        return to_route('modeltype.index');
+        return Redirect::route('modeltype.index');
     }
 
     public function destroy(ModelType $modeltype): RedirectResponse
     {
         $modeltype->delete();
 
-        return to_route('modeltype.index');
+        return Redirect::route('modeltype.index');
     }
 }

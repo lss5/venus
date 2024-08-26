@@ -7,6 +7,8 @@ use App\Notifications\LeadReceived;
 use App\Services\LeadCreateService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Redirect;
 
 class LeadController extends Controller
 {
@@ -24,12 +26,9 @@ class LeadController extends Controller
         ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
-        //
+        return view('admin.leads.create');
     }
 
     public function store(Request $request)
@@ -60,35 +59,32 @@ class LeadController extends Controller
 
     }
 
-    /**
-     * Display the specified resource.
-     */
     public function show(Lead $lead)
     {
-        //
+        return view('admin.leads.show', ['lead' => $lead]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
     public function edit(Lead $lead)
     {
-        //
+        return view('admin.leads.edit', ['lead' => $lead]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(Request $request, Lead $lead)
     {
-        //
+        $validated = $request->validate([
+            'name' => 'required|max:20',
+            'phone' => 'required|min:6|max:64',
+        ]);
+
+        $lead->update($validated);
+
+        return Redirect::route('lead.show', $lead->id);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(Lead $lead)
     {
-        //
+        $lead->delete();
+
+        return Redirect::route('lead.index');
     }
 }

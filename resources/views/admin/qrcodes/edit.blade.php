@@ -26,7 +26,7 @@
             <div class="row mb-3">
                 <label for="serial_number" class="col-sm-2 col-form-label">Серийный номер</label>
                 <div class="col-sm-10">
-                    <input type="number" min="0" step="1" value="{{ $item->serial_number}}" class="form-control @error('serial_number') is-invalid @enderror" id="serial_number" name="serial_number">
+                    <input type="number" min="0" step="1" value="{{ old('serial_number') ?? $item->serial_number }}" class="form-control @error('serial_number') is-invalid @enderror" id="serial_number" name="serial_number">
                     <div class="form-text text-muted fs-sm">Начальный серийный номер</div>
                     @error('serial_number')
                         <div class="form-text text-danger fs-sm">{{ $message }}</div>
@@ -36,7 +36,10 @@
             <div class="row mb-3">
                 <label for="description" class="col-sm-2 col-form-label">Описание</label>
                 <div class="col-sm-10">
-                    <textarea class="form-control" id="description" name="description" rows="3">{{ old('description') ?? ''}}</textarea>
+                    <textarea class="form-control" id="description" name="description" rows="3">{{ old('description') ?? $item->description}}</textarea>
+                    @error('description')
+                        <div class="form-text text-danger fs-sm">{{ $message }}</div>
+                    @enderror
                 </div>
             </div>
             <button type="submit" class="btn btn-primary">Сохранить</button>

@@ -20,10 +20,10 @@
                     <span class="text-decoration-line-through fw-light">12800₽</span> 9990₽
                 </div>
                 <div class="mt-3">
-                    <a href="https://www.wildberries.ru/catalog/179403701/detail.aspx" target="_blank" class="btn btn-wb">Wildberries</a>
-                    <a href="https://www.ozon.ru/product/nastolnaya-manikyurnaya-vytyazhka-venus-professional-1403635649/" target="_blank" class="btn btn-ozon">OZON</a>
-                    <a href="https://market.yandex.ru/product--nastolnaia-vytiazhka-dlia-manikiura-venus-professional/54515310" target="_blank" class="btn btn-yamarket">Я.Маркет</a>
-                    <a href="https://megamarket.ru/catalog/details/vytyazhka-dlya-manikyura-venus-professional-600017050378/" target="_blank" class="btn btn-megamarket">МегаМаркет</a>
+                    <a href="https://www.wildberries.ru/catalog/179403701/detail.aspx" target="_blank" class="btn btn-wb mt-1">Wildberries</a>
+                    <a href="https://www.ozon.ru/product/nastolnaya-manikyurnaya-vytyazhka-venus-professional-1403635649/" target="_blank" class="btn btn-ozon mt-1">OZON</a>
+                    <a href="https://market.yandex.ru/product--nastolnaia-vytiazhka-dlia-manikiura-venus-professional/54515310" target="_blank" class="btn btn-yamarket mt-1">Я.Маркет</a>
+                    <a href="https://megamarket.ru/catalog/details/vytyazhka-dlya-manikyura-venus-professional-600017050378/" target="_blank" class="btn btn-megamarket mt-1">МегаМаркет</a>
                 </div>
 
                 <!-- Modal -->
@@ -267,10 +267,10 @@
                     <p class="text-secondary fs-6 fw-light mt-1">Гарантия низкой цены! Нашли дешевле - сделаем скидку!</p>
                 </div>
                 <div class="card-footer">
-                    <a href="https://www.ozon.ru/product/nastolnaya-manikyurnaya-vytyazhka-venus-professional-1403635649/" target="_blank" class="btn btn-ozon">OZON</a>
-                    <a href="https://www.wildberries.ru/catalog/179403701/detail.aspx" target="_blank" class="btn btn-wb">Wildberries</a>
-                    <a href="https://market.yandex.ru/product--nastolnaia-vytiazhka-dlia-manikiura-venus-professional/54515310" target="_blank" class="btn btn-yamarket mt-2 mt-sm-0">Я.Маркет</a>
-                    <a href="https://megamarket.ru/catalog/details/vytyazhka-dlya-manikyura-venus-professional-600017050378/" target="_blank" class="btn btn-megamarket mt-2 mt-sm-0">МегаМаркет</a>
+                    <a href="https://www.ozon.ru/product/nastolnaya-manikyurnaya-vytyazhka-venus-professional-1403635649/" target="_blank" class="btn btn-ozon mt-1 mt-sm-0">OZON</a>
+                    <a href="https://www.wildberries.ru/catalog/179403701/detail.aspx" target="_blank" class="btn btn-wb mt-1 mt-sm-0">Wildberries</a>
+                    <a href="https://market.yandex.ru/product--nastolnaia-vytiazhka-dlia-manikiura-venus-professional/54515310" target="_blank" class="btn btn-yamarket mt-1 mt-sm-0">Я.Маркет</a>
+                    <a href="https://megamarket.ru/catalog/details/vytyazhka-dlya-manikyura-venus-professional-600017050378/" target="_blank" class="btn btn-megamarket mt-1 mt-sm-0">МегаМаркет</a>
                 </div>
             </div>
         </div>

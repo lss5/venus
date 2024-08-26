@@ -3,8 +3,9 @@
 @section('content')
     <div class="container mb-5">
         <div class="row">
-            <div class="col-12 my-3 my-lg-5">
+            <div class="col-12 my-3">
                 <h1 class="fs-4 fw-medium">QR codes</h1>
+                <a href="{{ route('qrcode.create') }}" class="btn btn-primary mt-3">Создать QR-коды</a>
                 <table class="table table-hover">
                     <thead>
                         <tr>
@@ -29,7 +30,6 @@
                         @endforeach
                     </tbody>
                   </table>
-                <a href="{{ route('qrcode.create') }}" class="btn btn-primary mt-3">Создать QR-коды</a>
             </div>
         </div>
     </div>

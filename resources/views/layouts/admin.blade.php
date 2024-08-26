@@ -14,6 +14,8 @@
     </header>
 
     <main class="pt-navbar">
+        @include('partials.nav_admin')
+
         @yield('content')
     </main>
 

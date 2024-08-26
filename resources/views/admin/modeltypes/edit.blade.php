@@ -3,7 +3,7 @@
 @section('content')
     <div class="container mb-5">
         <div class="row">
-            <div class="col-12 my-3 my-lg-5">
+            <div class="col-12 my-3">
                 <h1 class="fs-4 fw-medium">Редактирование модели товара</h1>
                 <form method="POST" action="{{ route('modeltype.update', $modeltype->id) }}">
                     @csrf

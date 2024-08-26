@@ -49,7 +49,11 @@ Route::prefix('admin')->name('admin.')->middleware('auth','verified')->group(fun
 // Leads
 Route::prefix('lead')->name('lead.')->middleware('auth','verified')->group(function(){
     Route::get('/', [LeadController::class, 'index'])->name('index');
+    Route::get('/create', [LeadController::class, 'create'])->name('create');
     Route::get('/{lead}', [LeadController::class, 'show'])->name('show');
+    Route::get('/{lead}/edit', [LeadController::class, 'edit'])->name('edit');
+    Route::put('/{lead}', [LeadController::class, 'update'])->name('update');
+    Route::delete('/{lead}', [LeadController::class, 'destroy'])->name('destroy');
 });
 
 // products
