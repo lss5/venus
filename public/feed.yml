@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yml_catalog date="2024-08-01T14:37:38+03:00">
+    <shop>
+        <name>VENUS PROFESSIONAL</name>
+        <company>Вытяжка для маникюра VENUS PROFESSIONAL</company>
+        <url>https://clean-spc.ru</url>
+        <platform>Native</platform>
+        <categories>
+            <category id="1">Пылесосы маникюрные</category>
+        </categories>
+        <delivery-options>
+            <option cost="600" days="5"/>
+        </delivery-options>
+        <pickup-options>
+            <option cost="600" days="1"/>
+        </pickup-options>
+        <offers>
+            <offer id="1">
+                <name>Настольная вытяжка для маникюра VENUS PROFESSIONAL</name>
+                <vendor>VENUS PROFESSIONAL</vendor>
+                <vendorCode>МНВ-СП-4</vendorCode>
+                <url>https://clean-spc.ru</url>
+                <price>9990</price>
+                <oldprice>12800</oldprice>
+                <enable_auto_discounts>true</enable_auto_discounts>
+                <currencyId>RUR</currencyId>
+                <categoryId>101</categoryId>
+                <picture>https://clean-spc.ru/build/assets/main-CNfx2Je8.png</picture>
+                <description>
+                    <![CDATA[
+                        <p>VENUS PROFESSIONAL - это новая настольная вытяжка с радиальным вентилятором и бумажным фильтром высокой степени очистки. Плавная регулировка мощности поможет подобрать оптимальный режим работы, а конструкция разработана с учетом возможности легкого извлечения фильтра для чистки и обслуживания.</p>
+                        <p>Выбор качественных комплектующих и металлического корпуса делает устройтво надежным и долговечным. Мы сделали процесс работы мастера комфортным и безопасным! С VENUS PROFESSIONAL в Вашем кабинете всегда будет чистый воздух и никакого утомительного шума!</p>
+                    ]]>
+                </description>
+                <sales_notes>Необходима предоплата.</sales_notes>
+                <manufacturer_warranty>true</manufacturer_warranty>
+                <barcode>2038700936037</barcode>
+                <param name="Цвет">белый</param>
+                <weight>3.6</weight>
+                <dimensions>24.0/21.2/11.2</dimensions>
+                <condition type="preowned">
+                    <quality>excellent</quality>
+                </condition>
+            </offer>
+        </offers>
+    </shop>
+</yml_catalog>
