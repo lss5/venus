@@ -16,4 +16,9 @@ class ModelType extends Model
     {
         return $this->hasMany(Qrcode::class);
     }
+
+    public function products(): HasMany
+    {
+        return $this->hasMany(Product::class);
+    }
 }

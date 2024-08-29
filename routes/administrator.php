@@ -6,8 +6,9 @@ use App\Http\Controllers\AdministratorController;
 use App\Http\Controllers\ModelTypeController;
 use App\Http\Controllers\QrcodeController;
 use App\Http\Controllers\LeadController;
-use App\Http\Controllers\Administrator\CategoryController;
-use App\Http\Controllers\ProductController;
+use App\Http\Controllers\Administrator\CategoryController as AdministratorCategoryController;
+use App\Http\Controllers\Administrator\ProductController as AdministratorProductController;
+use App\Http\Controllers\Administrator\ImageController as AdministratorImageController;
 
 Route::prefix('admin')->name('admin.')->middleware('auth','verified')->group(function(){
     Route::get('/', [AdministratorController::class, 'index'])->name('index');
@@ -43,10 +44,23 @@ Route::prefix('lead')->name('lead.')->middleware('auth','verified')->group(funct
 });
 
 Route::prefix('administrator/category')->name('admin.category.')->middleware('auth','verified')->group(function(){
-    Route::get('/', [CategoryController::class, 'index'])->name('index');
-    Route::get('/create', [CategoryController::class, 'create'])->name('create');
-    Route::post('/', [CategoryController::class, 'store'])->name('store');
-    Route::get('/{category}/edit', [CategoryController::class, 'edit'])->name('edit');
-    Route::put('/{category}', [CategoryController::class, 'update'])->name('update');
-    Route::delete('/{category}', [CategoryController::class, 'destroy'])->name('destroy');
+    Route::get('/', [AdministratorCategoryController::class, 'index'])->name('index');
+    Route::get('/create', [AdministratorCategoryController::class, 'create'])->name('create');
+    Route::post('/', [AdministratorCategoryController::class, 'store'])->name('store');
+    Route::get('/{category}/edit', [AdministratorCategoryController::class, 'edit'])->name('edit');
+    Route::put('/{category}', [AdministratorCategoryController::class, 'update'])->name('update');
+    Route::delete('/{category}', [AdministratorCategoryController::class, 'destroy'])->name('destroy');
+});
+
+Route::prefix('administrator/product')->name('admin.product.')->middleware('auth','verified')->group(function(){
+    Route::get('/', [AdministratorProductController::class, 'index'])->name('index');
+    Route::get('/create', [AdministratorProductController::class, 'create'])->name('create');
+    Route::post('/', [AdministratorProductController::class, 'store'])->name('store');
+    Route::get('/{product}/edit', [AdministratorProductController::class, 'edit'])->name('edit');
+    Route::put('/{product}', [AdministratorProductController::class, 'update'])->name('update');
+    Route::delete('/{product}', [AdministratorProductController::class, 'destroy'])->name('destroy');
+});
+
+Route::prefix('administrator/image')->name('admin.image.')->middleware('auth','verified')->group(function(){
+    Route::delete('/{image}', [AdministratorImageController::class, 'destroy'])->name('destroy');
 });
