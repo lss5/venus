@@ -1,31 +1,33 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Administrator;
 
-use App\Models\ModelType;
-use App\Models\Qrcode;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use App\Http\Controllers\Controller;
+use App\Models\ModelType;
+use App\Models\Qrcode;
+use Illuminate\View\View;
 use SimpleSoftwareIO\QrCode\Facades\QrCode as QrCodeGenerator;
 
 class QrcodeController extends Controller
 {
-    public function index()
+    public function index(): View
     {
         return view('admin.qrcodes.index', [
             'qrcodes' => Qrcode::all(),
         ]);
     }
 
-    public function create()
+    public function create(): View
     {
         return view('admin.qrcodes.create', [
             'models' => ModelType::all(),
         ]);
     }
 
-    public function store(Request $request)
+    public function store(Request $request): RedirectResponse
     {
         $validated = $request->validate([
             'model' => 'required|integer|exists:model_types,id',
@@ -50,7 +52,7 @@ class QrcodeController extends Controller
         // return view('');
     }
 
-    public function edit(Qrcode $qrcode)
+    public function edit(Qrcode $qrcode): View
     {
         return view('admin.qrcodes.edit', [
             'item' => $qrcode,

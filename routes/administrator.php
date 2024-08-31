@@ -2,19 +2,19 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\AdministratorController;
-use App\Http\Controllers\ModelTypeController;
-use App\Http\Controllers\QrcodeController;
-use App\Http\Controllers\LeadController;
+use App\Http\Controllers\Administrator\AdministratorController;
+use App\Http\Controllers\Administrator\ModelTypeController;
+use App\Http\Controllers\Administrator\QrcodeController;
+use App\Http\Controllers\Administrator\LeadController;
 use App\Http\Controllers\Administrator\CategoryController as AdministratorCategoryController;
 use App\Http\Controllers\Administrator\ProductController as AdministratorProductController;
 use App\Http\Controllers\Administrator\ImageController as AdministratorImageController;
 
-Route::prefix('admin')->name('admin.')->middleware('auth','verified')->group(function(){
+Route::prefix('admin')->name('admin.')->middleware('auth','can:admin')->group(function(){
     Route::get('/', [AdministratorController::class, 'index'])->name('index');
 });
 
-Route::prefix('modeltype')->name('modeltype.')->middleware('auth','verified')->group(function(){
+Route::prefix('modeltype')->name('modeltype.')->middleware('auth','can:admin')->group(function(){
     Route::get('/', [ModelTypeController::class, 'index'])->name('index');
     Route::get('/create', [ModelTypeController::class, 'create'])->name('create');
     Route::get('/{modeltype}', [ModelTypeController::class, 'show'])->name('show');
@@ -24,7 +24,7 @@ Route::prefix('modeltype')->name('modeltype.')->middleware('auth','verified')->g
     Route::delete('/{modeltype}', [ModelTypeController::class, 'destroy'])->name('destroy');
 });
 
-Route::prefix('qrcode')->name('qrcode.')->middleware('auth','verified')->group(function(){
+Route::prefix('qrcode')->name('qrcode.')->middleware('auth','can:admin')->group(function(){
     Route::get('/', [QrcodeController::class, 'index'])->name('index');
     Route::get('/create', [QrcodeController::class, 'create'])->name('create');
     Route::get('/{qrcode}', [QrcodeController::class, 'show'])->name('show');
@@ -34,7 +34,7 @@ Route::prefix('qrcode')->name('qrcode.')->middleware('auth','verified')->group(f
     Route::delete('/{qrcode}', [QrcodeController::class, 'destroy'])->name('destroy');
 });
 
-Route::prefix('lead')->name('lead.')->middleware('auth','verified')->group(function(){
+Route::prefix('lead')->name('lead.')->middleware('auth','can:admin')->group(function(){
     Route::get('/', [LeadController::class, 'index'])->name('index');
     Route::get('/create', [LeadController::class, 'create'])->name('create');
     Route::get('/{lead}', [LeadController::class, 'show'])->name('show');
@@ -43,7 +43,7 @@ Route::prefix('lead')->name('lead.')->middleware('auth','verified')->group(funct
     Route::delete('/{lead}', [LeadController::class, 'destroy'])->name('destroy');
 });
 
-Route::prefix('administrator/category')->name('admin.category.')->middleware('auth','verified')->group(function(){
+Route::prefix('administrator/category')->name('admin.category.')->middleware('auth','can:admin')->group(function(){
     Route::get('/', [AdministratorCategoryController::class, 'index'])->name('index');
     Route::get('/create', [AdministratorCategoryController::class, 'create'])->name('create');
     Route::post('/', [AdministratorCategoryController::class, 'store'])->name('store');
@@ -52,7 +52,7 @@ Route::prefix('administrator/category')->name('admin.category.')->middleware('au
     Route::delete('/{category}', [AdministratorCategoryController::class, 'destroy'])->name('destroy');
 });
 
-Route::prefix('administrator/product')->name('admin.product.')->middleware('auth','verified')->group(function(){
+Route::prefix('administrator/product')->name('admin.product.')->middleware('auth','can:admin')->group(function(){
     Route::get('/', [AdministratorProductController::class, 'index'])->name('index');
     Route::get('/create', [AdministratorProductController::class, 'create'])->name('create');
     Route::post('/', [AdministratorProductController::class, 'store'])->name('store');
@@ -61,6 +61,6 @@ Route::prefix('administrator/product')->name('admin.product.')->middleware('auth
     Route::delete('/{product}', [AdministratorProductController::class, 'destroy'])->name('destroy');
 });
 
-Route::prefix('administrator/image')->name('admin.image.')->middleware('auth','verified')->group(function(){
+Route::prefix('administrator/image')->name('admin.image.')->middleware('auth','can:admin')->group(function(){
     Route::delete('/{image}', [AdministratorImageController::class, 'destroy'])->name('destroy');
 });

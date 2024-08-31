@@ -1,14 +1,16 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Administrator;
 
-use App\Models\Lead;
-use App\Notifications\LeadReceived;
-use App\Services\LeadCreateService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Redirect;
+use App\Http\Controllers\Controller;
+use App\Models\Lead;
+use App\Notifications\LeadReceived;
+use App\Services\LeadCreateService;
+use Illuminate\View\View;
 
 class LeadController extends Controller
 {
@@ -19,14 +21,14 @@ class LeadController extends Controller
         $this->createService = $LeadCreateService;
     }
 
-    public function index()
+    public function index(): View
     {
         return view('admin.leads.index', [
             'leads' => Lead::all(),
         ]);
     }
 
-    public function create()
+    public function create(): View
     {
         return view('admin.leads.create');
     }
@@ -59,17 +61,17 @@ class LeadController extends Controller
 
     }
 
-    public function show(Lead $lead)
+    public function show(Lead $lead): View
     {
         return view('admin.leads.show', ['lead' => $lead]);
     }
 
-    public function edit(Lead $lead)
+    public function edit(Lead $lead): View
     {
         return view('admin.leads.edit', ['lead' => $lead]);
     }
 
-    public function update(Request $request, Lead $lead)
+    public function update(Request $request, Lead $lead): RedirectResponse
     {
         $validated = $request->validate([
             'name' => 'required|max:20',
@@ -81,7 +83,7 @@ class LeadController extends Controller
         return Redirect::route('lead.show', $lead->id);
     }
 
-    public function destroy(Lead $lead)
+    public function destroy(Lead $lead): RedirectResponse
     {
         $lead->delete();
 

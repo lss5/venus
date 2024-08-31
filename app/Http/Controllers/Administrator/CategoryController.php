@@ -7,15 +7,16 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use App\Models\Category;
+use Illuminate\View\View;
 
 class CategoryController extends Controller
 {
-    public function index()
+    public function index(): View
     {
         return view('admin.categories.index', ['categories' => Category::all()]);
     }
 
-    public function create()
+    public function create(): View
     {
         return view('admin.categories.create');
     }
@@ -32,7 +33,7 @@ class CategoryController extends Controller
         return Redirect::route('admin.category.index');
     }
 
-    public function edit(Category $category)
+    public function edit(Category $category): View
     {
         return view('admin.categories.edit', ['category' => $category]);
     }

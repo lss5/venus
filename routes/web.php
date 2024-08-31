@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 
-use App\Http\Controllers\LeadController;
+use App\Http\Controllers\Administrator\LeadController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\PageController;
 

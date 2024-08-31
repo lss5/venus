@@ -1,22 +1,24 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Administrator;
 
+use App\Http\Controllers\Controller;
 use App\Models\ModelType;
 use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\View\View;
 
 class ModelTypeController extends Controller
 {
-    public function index()
+    public function index(): View
     {
         return view('admin.modeltypes.index', [
             'modeltypes' => ModelType::all(),
         ]);
     }
 
-    public function create()
+    public function create(): View
     {
         return view('admin.modeltypes.create');
     }
@@ -35,12 +37,12 @@ class ModelTypeController extends Controller
         return Redirect::route('modeltype.index');
     }
 
-    public function show(ModelType $modeltype)
+    public function show(ModelType $modeltype): View
     {
         return view('admin.modeltypes.show', ['modeltype' => $modeltype]);
     }
 
-    public function edit(ModelType $modeltype)
+    public function edit(ModelType $modeltype): View
     {
         return view('admin.modeltypes.edit', ['modeltype' => $modeltype]);
     }
