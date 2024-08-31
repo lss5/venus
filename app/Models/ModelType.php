@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class ModelType extends Model
 {
@@ -17,8 +18,8 @@ class ModelType extends Model
         return $this->hasMany(Qrcode::class);
     }
 
-    public function products(): HasMany
+    public function product(): HasOne
     {
-        return $this->hasMany(Product::class);
+        return $this->hasOne(Product::class, 'modeltype_id');
     }
 }

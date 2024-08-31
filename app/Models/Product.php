@@ -14,9 +14,16 @@ class Product extends Model
 
     protected $guarded = [];
 
+    protected function casts(): array
+    {
+        return [
+            'characteristics' => 'array',
+        ];
+    }
+
     public function modeltype(): BelongsTo
     {
-        return $this->belongsTo(ModelType::class);
+        return $this->belongsTo(ModelType::class, 'modeltype_id');
     }
 
     public function category(): BelongsTo
