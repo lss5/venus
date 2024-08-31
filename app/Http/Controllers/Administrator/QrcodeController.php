@@ -44,7 +44,7 @@ class QrcodeController extends Controller
             Storage::put('public/qrcodes/'.$qrcode->modeltype_id .'_'. $qrcode->serial_number . '.png', QrCodeGenerator::size(256)->format('png')->generate('https://clean-spc.ru/product/qrcode/'.$qrcode->id));
         }
 
-        return redirect()->route('qrcode.index');
+        return redirect()->route('admin.qrcode.index');
     }
 
     public function show(Qrcode $qrcode)
@@ -75,13 +75,13 @@ class QrcodeController extends Controller
             'description' => $request->description,
         ]);
     
-        return redirect()->route('qrcode.index');
+        return redirect()->route('admin.qrcode.index');
     }
 
     public function destroy(Qrcode $qrcode): RedirectResponse
     {
         $qrcode->delete();
         
-        return redirect()->route('qrcode.index');
+        return redirect()->route('admin.qrcode.index');
     }
 }

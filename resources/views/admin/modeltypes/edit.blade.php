@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-12 my-3">
                 <h1 class="fs-4 fw-medium">Редактирование модели товара</h1>
-                <form method="POST" action="{{ route('modeltype.update', $modeltype->id) }}">
+                <form method="POST" action="{{ route('admin.modeltype.update', $modeltype->id) }}">
                     @csrf
                     @method('PUT')
                     <div class="row mb-3">
@@ -42,12 +42,12 @@
                         </div>
                     </div>
                     <button type="submit" class="btn btn-primary">Сохранить</button>
-                    <a href="{{ route('modeltype.index') }}" class="btn btn-secondary">Назад</a>
+                    <a href="{{ route('admin.modeltype.index') }}" class="btn btn-secondary">Назад</a>
                     <button class="btn btn-outline-danger" onclick="event.preventDefault();
                                     document.getElementById('delete-form').submit();">
                         Удалить</button>
                 </form>
-                <form action="{{ route('modeltype.destroy', $modeltype->id) }}" method="POST" id="delete-form" class="form-inline">
+                <form action="{{ route('admin.modeltype.destroy', $modeltype->id) }}" method="POST" id="delete-form" class="form-inline">
                     @method('DELETE')
                     @csrf
                 </form>

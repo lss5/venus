@@ -30,7 +30,7 @@ class LeadReceived extends Notification implements ShouldQueue
                     ->subject('Заявка с сайта')
                     ->line('Имя: '.$this->lead->name)
                     ->line('Телефон: '.$this->lead->phone)
-                    ->action('Открыть заявку', url(route('lead.show', $this->lead->id)));
+                    ->action('Открыть заявку', url(route('admin.lead.show', $this->lead->id)));
     }
 
     public function toArray(object $notifiable): array

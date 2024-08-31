@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-12 my-3">
                 <h1 class="fs-4 fw-medium">Создание новой заявки</h1>
-                <form method="POST" action="{{ route('lead.store') }}">
+                <form method="POST" action="{{ route('admin.lead.store') }}">
                     @csrf
                     <div class="row mb-3">
                         <label for="name" class="col-sm-2 col-form-label">Имя</label>
@@ -32,7 +32,7 @@
                         </div>
                     </div>
                     <button type="submit" class="btn btn-primary">Сохранить</button>
-                    <a href="{{ route('lead.index') }}" class="btn btn-secondary">Назад</a>
+                    <a href="{{ route('admin.lead.index') }}" class="btn btn-secondary">Назад</a>
                 </form>
             </div>
         </div>

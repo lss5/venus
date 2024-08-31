@@ -34,7 +34,7 @@ class ModelTypeController extends Controller
     
         ModelType::create($validated);
     
-        return Redirect::route('modeltype.index');
+        return Redirect::route('admin.modeltype.index');
     }
 
     public function show(ModelType $modeltype): View
@@ -58,13 +58,13 @@ class ModelTypeController extends Controller
 
         $modeltype->update($validated);
     
-        return Redirect::route('modeltype.index');
+        return Redirect::route('admin.modeltype.index');
     }
 
     public function destroy(ModelType $modeltype): RedirectResponse
     {
         $modeltype->delete();
 
-        return Redirect::route('modeltype.index');
+        return Redirect::route('admin.modeltype.index');
     }
 }

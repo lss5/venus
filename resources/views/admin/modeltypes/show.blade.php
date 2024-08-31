@@ -29,9 +29,9 @@
                         <textarea class="form-control-plaintext" id="description" rows="3">{{ $modeltype->description }}</textarea>
                     </div>
                 </div>
-                <a href="{{ route('qrcode.create') }}" class="btn btn-primary">Создать QR-коды</a>
-                <a href="{{ route('modeltype.edit', $modeltype->id) }}" class="btn btn-warning">Редактировать</a>
-                <a href="{{ route('modeltype.index') }}" class="btn btn-secondary">Назад</a>
+                <a href="{{ route('admin.qrcode.create') }}" class="btn btn-primary">Создать QR-коды</a>
+                <a href="{{ route('admin.modeltype.edit', $modeltype->id) }}" class="btn btn-warning">Редактировать</a>
+                <a href="{{ route('admin.modeltype.index') }}" class="btn btn-secondary">Назад</a>
             </div>
         </div>
     </div>

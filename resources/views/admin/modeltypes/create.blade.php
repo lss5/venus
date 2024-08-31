@@ -7,7 +7,7 @@
                 <h1 class="fs-3 fw-medium">Новая модель</h1>
             </div>
         </div>
-        <form method="POST" action="{{ route('modeltype.store') }}">
+        <form method="POST" action="{{ route('admin.modeltype.store') }}">
             @csrf
             <div class="row mb-3">
                 <label for="title" class="col-sm-2 col-form-label">Название</label>
@@ -43,7 +43,7 @@
                 </div>
             </div>
             <button type="submit" class="btn btn-primary">Создать</button>
-            <a href="{{ route('modeltype.index') }}" type="submit" class="btn btn-secondary">Назад</a>
+            <a href="{{ route('admin.modeltype.index') }}" type="submit" class="btn btn-secondary">Назад</a>
         </form>
     </div>
 @endsection

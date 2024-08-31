@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-12 my-3">
                 <h1 class="fs-4 fw-medium">Редактирование заявки {{ $lead->id }}</h1>
-                <form method="POST" action="{{ route('lead.update', $lead->id) }}">
+                <form method="POST" action="{{ route('admin.lead.update', $lead->id) }}">
                     @csrf
                     @method('PUT')
                     <div class="row mb-3">
@@ -33,12 +33,12 @@
                         </div>
                     </div>
                     <button type="submit" class="btn btn-primary">Сохранить</button>
-                    <a href="{{ route('lead.index') }}" class="btn btn-secondary">Назад</a>
+                    <a href="{{ route('admin.lead.index') }}" class="btn btn-secondary">Назад</a>
                     <button class="btn btn-outline-danger" onclick="event.preventDefault();
                                     document.getElementById('delete-form').submit();">
                         Удалить</button>
                 </form>
-                <form action="{{ route('lead.destroy', $lead->id) }}" method="POST" id="delete-form" class="form-inline">
+                <form action="{{ route('admin.lead.destroy', $lead->id) }}" method="POST" id="delete-form" class="form-inline">
                     @method('DELETE')
                     @csrf
                 </form>

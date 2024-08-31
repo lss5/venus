@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-12 my-3">
                 <h1 class="fs-4 fw-medium">QR codes</h1>
-                <a href="{{ route('qrcode.create') }}" class="btn btn-primary mt-3">Создать QR-коды</a>
+                <a href="{{ route('admin.qrcode.create') }}" class="btn btn-primary mt-3">Создать QR-коды</a>
                 <table class="table table-hover">
                     <thead>
                         <tr>
@@ -19,7 +19,7 @@
                     </thead>
                     <tbody>
                         @foreach ($qrcodes as $qrcode)
-                            <tr onclick="window.location='{{ route('qrcode.edit', $qrcode->id) }}';">
+                            <tr onclick="window.location='{{ route('admin.qrcode.edit', $qrcode->id) }}';">
                                 <td>{{ $qrcode->modeltype->title }}</td>
                                 <td>{{ $qrcode->modeltype->article }}</td>
                                 <td>{{ $qrcode->modeltype->version }}</td>

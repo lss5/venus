@@ -23,8 +23,8 @@
                         <textarea class="form-control-plaintext" id="description" rows="3"></textarea>
                     </div>
                 </div>
-                <a href="{{ route('lead.edit', $lead->id) }}" class="btn btn-warning">Редактировать</a>
-                <a href="{{ route('lead.index') }}" class="btn btn-secondary">Назад</a>
+                <a href="{{ route('admin.lead.edit', $lead->id) }}" class="btn btn-warning">Редактировать</a>
+                <a href="{{ route('admin.lead.index') }}" class="btn btn-secondary">Назад</a>
             </div>
         </div>
     </div>

@@ -7,7 +7,7 @@
                 <h1 class="fs-3 fw-medium">Создание партии</h1>
             </div>
         </div>
-        <form method="POST" action="{{ route('qrcode.store') }}">
+        <form method="POST" action="{{ route('admin.qrcode.store') }}">
             @csrf
             <div class="row mb-3">
                 <label for="model" class="col-sm-2 col-form-label">Модель</label>
@@ -43,7 +43,7 @@
                 </div>
             </div>
             <button type="submit" class="btn btn-primary">Создать</button>
-            <a href="{{ route('qrcode.index') }}" type="submit" class="btn btn-secondary">Назад</a>
+            <a href="{{ route('admin.qrcode.index') }}" type="submit" class="btn btn-secondary">Назад</a>
         </form>
     </div>
 @endsection
