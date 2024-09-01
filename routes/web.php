@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\LeadController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\QrcodeController;
 
 require __DIR__.'/auth.php';
 require __DIR__.'/administrator.php';
@@ -20,15 +21,17 @@ Route::name('pages.')->group(function(){
     Route::get('/politics', [PageController::class, 'politics'])->name('politics');
 });
 
-// Leads
 Route::post('/lead', [LeadController::class, 'store'])->name('lead.store');
 
-// Products for All
 Route::prefix('product')->name('product.')->group(function(){
     Route::get('/', [ProductController::class, 'index'])->name('index');
     // Route::get('/{product}', [ProductController::class, 'show'])->name('show');
-    Route::get('/qrcode/{qrcode}', [ProductController::class, 'qrcode'])->name('qrcode')
+
+    Route::get('/qrcode', [QrcodeController::class, 'index'])->name('qrcode.index');
+    Route::get('/qrcode/registration/{qrcode}', [QrcodeController::class, 'create'])->name('qrcode.create');
+    Route::post('/qrcode', [QrcodeController::class, 'store'])->name('qrcode.store');
+    Route::get('/qrcode/{qrcode}', [QrcodeController::class, 'show'])->name('qrcode.show')
         ->missing(function (Request $request) {
-            return Redirect::route('product.index');
+            return Redirect::route('product.qrcode.index');
         });
 });

@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-12 my-3">
                 <h1 class="fs-4 fw-medium">Заявки</h1>
-                <a href="{{ route('admin.lead.create') }}" class="btn btn-primary mt-3">Создать заявку</a>
+                <a href="{{ route('admin.lead.create') }}" class="btn btn-primary my-3">Создать заявку</a>
                 @empty($leads)
                     <h4>Нет заявок</h4>
                 @endempty

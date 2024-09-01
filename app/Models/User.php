@@ -56,7 +56,12 @@ class User extends Authenticatable
         if ($this->roles()->where('uniq_name', $role)->first()) {
             return true;
         }
-
         return false;
     }
+
+    public function qrcodes(): BelongsToMany
+    {
+        return $this->belongsToMany(Qrcode::class);
+    }
+
 }
