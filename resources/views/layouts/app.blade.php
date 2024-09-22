@@ -9,7 +9,7 @@
     <meta name="description" content="Настольная вытяжка с радиальным вентилятором и бумажным фильтром. Плавная регулировка мощности, легкое извлечение фильтра. Гарантия 12 месяцев.">
     <meta property="og:title" content="Вытяжка для маникюра VENUS PROFESSIONAL - Мощная, Тихая, Надежная!"/>
     <meta property="og:url" content="https://clean-spc.ru"/>
-    <meta property="og:image" content="{{ Vite::asset('resources/images/product/main.png') }}"/>
+    <meta property="og:image" content="{{ Vite::asset('resources/images/product/main.jpg') }}"/>
     <meta property="og:description" content="Настольная вытяжка с радиальным вентилятором и бумажным фильтром. Плавная регулировка мощности, легкое извлечение фильтра. Гарантия 12 месяцев."/>
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
     <!-- Yandex.Metrika counter -->

@@ -6,7 +6,7 @@
     <div class="row mb-3 mb-lg-5">
         <!-- Левая -->
         <div class="col-12 col-lg-6 px-0">
-            <img src="{{ Vite::asset('resources/images/product/main.png') }}" class="img img-fluid" alt="Вытяжка для маникюра VENUS PROFESSIONAL">
+            <img src="{{ Vite::asset('resources/images/product/main.jpg') }}" class="img img-fluid" alt="Вытяжка для маникюра VENUS PROFESSIONAL">
         </div>
         <!-- Правая -->
         <div class="col-12 col-lg-6 px-0 d-flex flex-row justify-content-center align-items-center slider-right-space ">

@@ -21,6 +21,11 @@
                         PRO_NAILS_MASTERS - Материалы и расходники для nail-мастеров (пр. Мира, д.50)
                     </a>
                 </li>
+                <li class="list-group-item">
+                    <a href="https://vk.com/anna_kolesova_nails" target="_blank" class="text-decoration-none text-space fw-medium">
+                        Студия ногтевой эстетики Анны Колесовой (Лесной проезд, 11, 3 этаж, офис 302)
+                    </a>
+                </li>
             </ul>
         </div>
     </div>

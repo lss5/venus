@@ -11,8 +11,9 @@
         <!-- Правая -->
         <div class="col-12 col-lg-6 px-0 d-flex flex-row justify-content-center align-items-center slider-right-space ">
             <div class="my-3 my-lg-5 text-center text-primary">
-                <p class="m-0 fs-1 fw-semibold">403</p>
-                <p class="mb-3 fs-3 fw-semibold">Страница не найдена!</p>
+                <p class="m-0 fs-1 fw-semibold">500</p>
+                <p class="mb-3 fs-3 fw-semibold">Технические неполадки</p>
+                <p class="mb-3 fs-4 fw-semibold">Мы уже работаем над их устранением</p>
                 <a href="{{ route('pages.index') }}" class="btn btn-primary btn-lg mb-3">
                     На главную
                 </a>
