@@ -6,7 +6,7 @@
     <div class="row">
         <!-- Левая -->
         <div class="col-12 col-lg-6 px-0">
-            <img src="{{ Vite::asset('resources/images/product/main.png') }}" class="img img-fluid" alt="Вытяжка для маникюра VENUS PROFESSIONAL">
+            <img src="{{ Vite::asset('resources/images/product/main.jpg') }}" class="img img-fluid" alt="Вытяжка для маникюра VENUS PROFESSIONAL">
         </div>
         <!-- Правая -->
         <div class="col-12 col-lg-6 px-0 d-flex flex-row justify-content-center align-items-center slider-right-space ">
@@ -73,41 +73,32 @@
         </div>
     </div>
 
-    <div class="row my-3">
+    <div class="row my-3 my-lg-5">
         {{-- <h2 class="mb-3 fw-medium fs-3 text-center">По-настоящему эффективно!</h2> --}}
-        <div class="col-12 col-lg-5 d-flex align-items-center order-0">
-            <img src="{{ Vite::asset('resources/images/product/GB_9977_1.png') }}" class="img-fluid" alt="">
+        <div class="col-12 col-lg-4 d-flex align-items-center order-0">
+            <img src="{{ Vite::asset('resources/images/product/filter.jpg') }}" class="img-fluid" alt="">
         </div>
-        <div class="col-12 col-lg-7 d-flex flex-column justify-content-center order-1">
+        <div class="col-12 col-lg-8 d-flex flex-column justify-content-center order-1">
             <h3 class="text-center fw-medium fs-4">Выходи на новый уровень!</h3>
             <p class="m-0 fs-5 fw-light text-justify">
                 Мелкодисперсная пыль, состоящая из опасных химикатов, частиц кожи и ногтей клиента
                 летает по кабинету до 24 часов после окончания работ. Вдыхание такой смеси приводит
                 к затруднению дыхания и снижению иммунитета, а также может быть причиной развития
-                различных заболеваний. В VENUS используется бумажный фильтр тонкой очистки,
+                различных заболеваний. <span class="fw-medium">Больше никаких мешков!</span>
+                В VENUS используется бумажный фильтр тонкой очистки,
                 позволяющий задерживать мелкодисперсные частицы (в том числе PM10 с диаметром менее
-                10 мкм). Также, предусмотрели возможность использования антибактериального
-                и угольного фильтров, что позволит еще больше повысить эффективность очистки воздуха.
+                10 мкм).
             </p>
-        </div>
-        <div class="col-12 col-lg-7 d-flex flex-column justify-content-center order-3 order-lg-2">
-            <h3 class="text-center fw-medium fs-4">Простота в использовании и обслуживании!</h3>
             <p class="m-0 fs-5 fw-light text-justify">
-                <span class="fw-medium">Больше никаких мешков!</span> После работы с клиентом,
+                После работы с клиентом,
                 достаточно просто вытряхнуть пыль из фильтра. А при использовании салфеток из ткани - только
                 аккуратно удалить салфетку! Благодаря высокой мощности и большой площади всасывания
-                захватывает гораздо больше пыли (в сравнении с обычными пылесосами для маникюра) и экономит место на столе мастера.
+                захватывает гораздо больше пыли (в сравнении с обычными пылесосами для маникюра).
                 Больше никакой пыли в кабинете! Чистый мастер, мебель и клиент!
             </p>
         </div>
-        <div class="col-12 col-lg-5 d-flex align-items-center order-2 order-lg-3">
-            <img src="{{ Vite::asset('resources/images/product/top.jpg') }}" class="img-fluid" alt="">
-        </div>
-        <div class="col-12 col-lg-4 d-flex align-items-center order-4">
-            <img src="{{ Vite::asset('resources/images/product/vent.webp') }}" class="img-fluid" alt="">
-        </div>
-        <div class="col-12 col-lg-8 d-flex flex-column justify-content-center order-5">
-            <h3 class="text-center fw-medium fs-4">Мощный радиальный вентилятор</h3>
+        <div class="col-12 col-lg-8 d-flex flex-column justify-content-center order-3 order-lg-2">
+            <h3 class="text-center fw-medium fs-4">Мощный радиальный вентилятор!</h3>
             <p class="m-0 fs-5 fw-light text-justify">
                 В вытяжке используется вентилятор промышленного класса, который создает непревзойденную тягу и при этом
                 тихий даже на максимальной мощности! Большой размер лопастей позволяет засасывать гораздо большое
@@ -116,16 +107,37 @@
                 детали изнашивающиеся в процессе эксплуатации, что делает его практически "вечным".
             </p>
         </div>
+        <div class="col-12 col-lg-4 d-flex align-items-center order-2 order-lg-3">
+            <img src="{{ Vite::asset('resources/images/product/vent.webp') }}" class="img-fluid" alt="">
+        </div>
+        <div class="col-12 col-lg-5 d-flex align-items-center order-4">
+            <img src="{{ Vite::asset('resources/images/product/left.jpg') }}" class="img-fluid" alt="">
+        </div>
+        <div class="col-12 col-lg-7 d-flex flex-column justify-content-center order-5">
+            <h3 class="text-center fw-medium fs-4">Удобство и безопасность!</h3>
+            <p class="m-0 fs-5 fw-light text-justify">
+                В вытяжке установлен разьем для подключения кабеля сетевого питания
+                с заземляющим контактом и плавким предохранителем. Это обеспечивает необходимый уровень безопасности
+                в случае каких-либо нештатных ситуаций. Еще один ключ к сохранению здоровья мастера и его клиентов.
+                Вытяжка комплектуется кабелем длинной 1.8 метра, но вы можете использовать любой другой кабель
+                необходимой Вам длинны или цвета.
+            </p>
+            <p class="m-0 fs-5 fw-light text-justify">
+                Для удобного использования добавлена плавная регулировка мощности в широком диапазоне.
+                В любом режиме вытяжка остается тихой и обладает достаточной производительностью для эффективного
+                удаления как крупных частей, так и мелкодисперсной пыли.
+            </p>
+        </div>
     </div>
 
     <div class="row my-3">
         <p class="fs-5 fw-light text-justify">
-            Вытяжка <span class="fw-medium">производиться в России</span> на высокоточном оборудовании с
+            Вытяжка <span class="fw-medium">производится в России</span> на высокоточном оборудовании с
             программным управлением.
             Используется стойкая к химическим очистителям полимерная окраска.
             Все комплектующие проходят строгий контроль качества.
-            Каждое изделие имеет все необходимые документы и соответствует требованиям необходимых ГОСТ и
-            технических регламетов ЕАС.
+            Каждое изделие соответствует требованиям необходимых ГОСТ и технических регламентов ЕАС,
+            а также имеет все необходимые документы.
         </p>
     </div>
 
@@ -180,7 +192,7 @@
                 </li>
                 <li class="list-group-item d-flex justify-content-between align-items-start">
                     <div>Срок службы</div>
-                    <span class="fw-medium text-end">40 000 часов</span>
+                    <span class="fw-medium text-end">30 000 часов</span>
                 </li>
                 <li class="list-group-item d-flex justify-content-between align-items-start">
                     <div>Уровень шума</div>
@@ -188,7 +200,7 @@
                 </li>
                 <li class="list-group-item d-flex justify-content-between align-items-start">
                     <div>Мощность двигателя</div>
-                    <span class="fw-medium text-end">50 Вт</span>
+                    <span class="fw-medium text-end">46 Вт</span>
                 </li>
                 <li class="list-group-item d-flex justify-content-between align-items-start">
                     <div>Скорость вращения</div>
@@ -200,7 +212,7 @@
                 </li>
                 <li class="list-group-item d-flex justify-content-between align-items-start">
                     <div>Габариты (ДxШхВ)</div>
-                    <span class="fw-medium text-end">245мм x 217мм х 112мм</span>
+                    <span class="fw-medium text-end">240мм x 215мм х 112мм</span>
                 </li>
                 <li class="list-group-item d-flex justify-content-between align-items-start">
                     <div>Вес</div>
@@ -213,7 +225,7 @@
             </ul>
         </div>
         <div class="col-12 col-lg-6">
-            <img src="{{ Vite::asset('resources/images/product/razmer.png') }}" alt="" class="img-fluid mt-3">
+            <img src="{{ Vite::asset('resources/images/product/razmer.jpg') }}" alt="" class="img-fluid mt-3">
         </div>
     </div>
 
